@@ -6,12 +6,11 @@ export default function Footer() {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "30vh",
+          height: "10vh",
           color: "white",
           width: "100%",
         }}
       >
-        <h1>Footer</h1>
       </div>
     </footer>
   );

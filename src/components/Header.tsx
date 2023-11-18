@@ -1,12 +1,12 @@
 export default function Header() {
     return (
-      <header className="header" style={{ position: 'fixed', top: 0, width: '100%' }}>
+      <header className="header" style={{top: 0, width: '100%' }}>
         <div
           style={{
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#1ea7fd",
+            backgroundColor: "#5e6e80",
             color: "white",
             height: "100%",
             width: "100%",

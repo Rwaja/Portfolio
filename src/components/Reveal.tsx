@@ -1,43 +1,41 @@
-import { color, motion, useInView, useAnimation } from "framer-motion";
-import React, { useEffect, useRef } from 'react';
- 
+import {
+  color,
+  motion,
+  useInView,
+  useAnimation,
+  useTransform,
+  useScroll,
+} from "framer-motion";
+import React, { useEffect, useRef } from "react";
+
 interface Props {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }
 export default function Return({ children }: Props) {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true });
-  
-    const mainControls = useAnimation();
-  
-    useEffect(() => {
-      if (isInView) {
-        mainControls.start("visible");
-      }
-    }, [isInView]);
-  
-    return (
-    <div
-        ref={ref}
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          color: "white",
-          width: "100%",
-        }}
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const { scrollYProgress } = useScroll();
+  const scale = useTransform(scrollYProgress, [0, 1], [0.1, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const y = useTransform(scrollYProgress, [0, 1], [75, 0]);
+  const mainControls = useAnimation();
+  const slideControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+      slideControls.start("visible");
+    }
+  }, [isInView]);
+
+  return (
+    <div>
+      <motion.div
+        initial={{ opacity: 0.2, scale: 0.8 }}
+        transition={{ duration: 0.1, ease: "linear"}}
+        whileInView={{ opacity: 1, scale: 1 }}
       >
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 75 },
-        visible: { opacity: 1, y: 0, transition: { duration: 2 } },
-      }}
-      initial="hidden"
-      animate={mainControls}
-      transition={{ duration: 2, delay: 1 }}
-      >
-      {children}
-    </motion.div>
-        </div>
+        {children}
+      </motion.div>
+    </div>
   );
-};
+}
