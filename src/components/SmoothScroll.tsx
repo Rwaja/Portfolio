@@ -1,5 +1,20 @@
-import { motion, useScroll, useSpring, useTransform } from "framer-motion";
-import { useState, useRef, useEffect } from "react";
+import { motion, useScroll, useSpring, useTransform, useMotionValue, MotionValue } from "framer-motion";
+import { useState, useRef, useEffect, createContext, useContext } from "react";
+import Navbar from "./Header";
+
+
+export const ScrollContext = createContext<MotionValue | null>(null);
+
+export function ScrollProvider({ children }: { children: React.ReactNode }) {
+  const scrollY = useMotionValue(0);
+
+  return (
+    <ScrollContext.Provider value={scrollY}>
+      {children}
+    </ScrollContext.Provider>
+  );
+}
+
 export default function SmoothScroll({
   children,
 }: {
@@ -9,7 +24,8 @@ export default function SmoothScroll({
   const smoothProgress = useSpring(scrollYProgress, { mass: 0.1 });
   const contentRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(1316);
-
+  const scrollY = useContext(ScrollContext);
+  
   let y;
   if (typeof window !== "undefined") {
     y = useTransform(smoothProgress, (value) => {
@@ -40,6 +56,7 @@ export default function SmoothScroll({
 
   return (
     <>
+      <Navbar/>
       <div style={{ height: contentHeight }} />
 
       <motion.div
