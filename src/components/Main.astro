@@ -1,0 +1,17 @@
+---
+import { color, motion, useInView, useAnimation, scroll,AnimatePresence } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { useState } from "react";
+import ProfileImg from "./Profile-img.tsx";
+import SmoothScroll from "./SmoothScroll.tsx";
+import Landing from "./Landing.tsx";
+import Reveal from "./Reveal.tsx";
+---
+    <div>
+      <SmoothScroll client:only="react">
+    <main style={{backgroundColor: 'gray',height:'100%',minHeight: '100vh'}}>
+      <div style={{backgroundColor: 'green', width:'100%', height:'100vh'}}></div>
+      <div style={{backgroundColor: 'blue', width:'100%', height:'100vh'}}></div>
+    </main>
+    </SmoothScroll>
+    </div>
