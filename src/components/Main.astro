@@ -17,33 +17,108 @@ import Navbar from "./Header";
 ---
 
 <div>
+  <Navbar />
   <main
     style={{
-      backgroundColor: "gray",
-      display: "block",
       height: "100%",
       minHeight: "100vh",
     }}
   >
-    <Navbar />
-      <section
-        id="about"
-        style={{ backgroundColor: "green", width: "100%", height: "100vh" }}
-      >
-      </section>
-      <section
-        id="skills"
-        style={{ backgroundColor: "red", width: "100%", height: "100vh" }}
-      >
-      </section>
-      <section
-        id="proyects"
-        style={{ backgroundColor: "white", width: "100%", height: "100vh" }}
-      >
-      </section>
-      <section
-        style={{ backgroundColor: "blue", width: "100%", height: "100vh" }}
-      >
-      </section>
+    <section id="about">
+      <Reveal client:only="react">
+        <div
+          style={{
+            backgroundColor: "red",
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed quas
+            maxime autem porro facilis earum provident natus praesentium? Dolor
+            quidem ipsum expedita quas? Libero voluptas et, vitae aut ullam
+            unde!
+          </h1>
+        </div>
+      </Reveal>
+    </section>
+    <section id="skills">
+      <Reveal client:only="react">
+        <div
+          style={{
+            backgroundColor: "green",
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
+            praesentium sit ea porro nostrum pariatur dolore? Minima magnam
+            dolore nulla cum veniam optio, dicta placeat esse vel obcaecati quia
+            autem.
+          </h1>
+        </div>
+      </Reveal>
+    </section>
+    <section id="proyects">
+      <Reveal client:only="react">
+        <div
+          style={{
+            backgroundColor: "blue",
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <motion.h1>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo
+            provident et iure accusantium? Amet veniam, modi deleniti harum
+            nobis iste minima, dolor quas quasi consequatur, animi magni magnam
+            perspiciatis laboriosam?
+          </motion.h1>
+        </div>
+      </Reveal>
+    </section>
+    <section id="contact">
+      <Reveal client:only="react">
+        <div
+          style={{
+            backgroundColor: "pink",
+            width: "100%",
+            height: "100vh",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          <h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga vero
+            accusamus vel aliquam ipsam velit asperiores voluptate aperiam,
+            tenetur magni? Ad voluptatem enim sequi, quasi maxime reprehenderit?
+            Sapiente, eius aut!
+          </h1>
+        </div>
+      </Reveal>
+    </section>
   </main>
 </div>
+<style>
+  main {
+    padding-top: 8vh;
+  }
+  
+section {
+}
+</style>
