@@ -11,15 +11,15 @@ import React, { useEffect, useRef } from "react";
 interface Props {
   children: React.ReactNode;
 }
-export default function Return({ children }: Props) {
+export default function RevealText({ children }: Props) {
  
   return (
-      <motion.div
-        initial={{ opacity: 0.2} }
-        transition={{ duration: 0.7}}
-        whileInView={{ opacity: 1 }}
+      <motion.h1 
+        initial={{ opacity: 0.2, scale:0.6} }
+        transition={{ duration: 0.6, ease: "easeInOut" }}
+        whileInView={{ opacity: 1 ,scale: 1.1}}
       >
         {children}
-      </motion.div>
+      </motion.h1>
   );
 }

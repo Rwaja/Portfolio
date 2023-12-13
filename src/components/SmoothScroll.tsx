@@ -1,6 +1,6 @@
 import { motion, useScroll, useSpring, useTransform, useMotionValue, MotionValue } from "framer-motion";
 import { useState, useRef, useEffect, createContext, useContext } from "react";
-import Navbar from "./Header";
+import Navbar from "./Header.astro";
 
 
 export const ScrollContext = createContext<MotionValue | null>(null);
