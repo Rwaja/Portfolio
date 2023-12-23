@@ -1,6 +1,6 @@
 ---
 import { Image, Picture } from "astro:assets";
-import ProfileImg from "../assets/pngegg.png";  
+import ProfileImg from "../assets/pngegg.png";
 import MailIcon from "../assets/mail.svg";
 import GithubIcon from "../assets/github.svg";
 import LinkedinIcon from "../assets/linkedin.svg";
@@ -8,23 +8,28 @@ import LinkedinIcon from "../assets/linkedin.svg";
 
 <main class="mt-[8vh]">
   <section
-  id="home"
-  class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-slate-700"
+    id="home"
+    class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-slate-700"
   >
-  <!-- TODO: Evaluar si poner un boton o no-->
-    <div class="flex flex-col items-center justify-center md:mt-[-8vh] md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16">
+    <!-- TODO: Evaluar si poner un boton o no-->
+    <hero class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[100%] h-[75%]">
+    <div
+      class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16"
+    >
       <div class="w-auto h-auto mt-5">
         <div class="pt-1">
-          <h1 class="text-lg font-bold ">HI, I'M <span class="name">RODRIGO</span></h1>
+          <h1 class="text-lg font-bold">
+            HI, I'M <span class="name">RODRIGO</span>
+          </h1>
           <h2 class="font-medium text-base">on the path of web development</h2>
           <p>
-            I'm a web developer, I love to create beautiful and
-            functional websites.
+            I'm a web developer, I love to create beautiful and functional
+            websites.
           </p>
         </div>
         <div class="flex pt-3 md:pt-5 gap-6 w-[100%] h-[20%]">
           <a href="#contact">
-            <Picture src={MailIcon} format="svg" alt="Mail icon"/>
+            <Picture src={MailIcon} format="svg" alt="Mail icon" />
           </a>
           <a href="https://github.com/Rwaja" target="_blank">
             <Picture src={GithubIcon} format="svg" alt="Github icon" />
@@ -35,26 +40,46 @@ import LinkedinIcon from "../assets/linkedin.svg";
         </div>
       </div>
       <div class="w-[100%] md:w-[30%] h-auto mt-3 md:mt-0">
-        <Image src={ProfileImg} alt="Profile Image" format="png" class={"w-[200px] h-[200px] mx-auto"}/>
+        <Image
+          src={ProfileImg}
+          alt="Profile Image"
+          format="png"
+          class={"w-[200px] h-[200px] mx-auto"}
+        />
       </div>
     </div>
+  </hero>
   </section>
-  <section id="about" class="scroll-mt-[8vh]">
+  <section
+    id="about"
+    class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-orange-700"
+  >
     <!-- TODO: Exlicar q soy estudiante(api de linkedin??), que tengo experiencia como freelance y que busco un trabajo en relacion de dependencia y experiancia con tecnologias usadas -->
-    <div class="h-[100vh] bg-orange-700">
+    <div
+      class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16"
+    >
       <h1 class="text-xl">About</h1>
-      
     </div>
   </section>
-  <section id="proyects" class="scroll-mt-[8vh]">
+  <section
+    id="proyects"
+    class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-blue-700"
+  >
     <!-- TODO: Usar React para mostrar mis proyects de github y tecnologias en minimalista-->
-    <div class="h-[100vh] bg-blue-700">
+    <div
+      class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16"
+    >
       <h1 class="text-xl">Proyects</h1>
     </div>
   </section>
-  <section id="contact" class="scroll-mt-[8vh]">
+  <section
+    id="contact"
+    class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-green-700"
+  >
     <!-- TODO: Formas de onerse en contacto conmigo y respectivas redes sociales -->
-    <div class="h-[100vh] bg-green-700">
+    <div
+      class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16"
+    >
       <h1 class="text-xl">Contact</h1>
     </div>
   </section>
