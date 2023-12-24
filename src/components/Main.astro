@@ -11,7 +11,7 @@ import LinkedinIcon from "../assets/linkedin.svg";
     id="home"
     class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-slate-700"
   >
-    <!-- TODO: Poner una mejor descripcion-->
+    <!-- TODO: Completar Descripcion-->
     <hero class="flex justify-center w-[100%] h-[100%] md:h-[75%]">
       <div
         class="flex flex-col md:pt-[0] md:flex-row md:justify-center md:items-center w-[80%] md:w-[685px] h-[92vh] md:h-[100%] gap-16"
@@ -25,8 +25,8 @@ import LinkedinIcon from "../assets/linkedin.svg";
               on the path of web development
             </h2>
             <p>
-              I'm a web developer, I love to create beautiful and functional
-              websites.
+              Systems engineering student, freelance web developer in my free
+              time.
             </p>
           </div>
           <div class="flex pt-3 md:pt-5 gap-6 w-[100%] h-[20%]">
@@ -54,25 +54,36 @@ import LinkedinIcon from "../assets/linkedin.svg";
   </section>
   <section
     id="about"
-    class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-orange-700"
+    class="scroll-mt-[8vh] flex justify-center h-auto md:h-[92vh] bg-orange-700"
   >
-    <!-- TODO: Mejorar diseño responsive-->
+    <!-- TODO: Mejorar diseño responsive, completar con mis links-->
     <div class="flex justify-center w-[100%] h-[100%] md:h-[75%]">
+      <!-- About me -->
       <div class="flex flex-col w-[80%] gap-6">
-        <!-- About me -->
-        <>
-          <p>
-            I'm Rodrigo &#x1F44B;, I joined the world of web development at the
-            beginning of 2023 and discovered one of the things that I am most
-            passionate about and that is web development &#x1F680;.
-            <br />
-             I currently live in Argentina, where I am a systems engineering
-            student, in my 4th year, at the Universidad Adventista de la Plata,
-            where I am a freelance web developer &#x1F4BB;. I am also looking
-            for new opportunities that can help me grow as a person and
-            professional!
-          </p>
-          <p>My links &#x1F449;</p>
+      <p class="font-extrabold">
+        About.
+      </p>
+        <p>
+          I'm Rodrigo &#x1F44B;, I joined the world of web development at the
+          beginning of 2023 and discovered one of the things that I am most
+          passionate about and that is web development &#x1F680;.
+          <br />
+           I currently live in Argentina, where I am a systems engineering
+          student, in my 4th year, at the Universidad Adventista de la Plata,
+          where I am a freelance web developer &#x1F4BB;. I am also looking for
+          new opportunities that can help me grow as a person and professional!
+        </p>
+        <span class="flex gap-3">My links &#x1F449;
+          <a href="#contact">
+            <Picture src={MailIcon} format="svg" alt="Mail icon" />
+          </a>
+          <a href="https://github.com/Rwaja" target="_blank">
+            <Picture src={GithubIcon} format="svg" alt="Github icon" />
+          </a>
+          <a href="https://linkedin.com/in/rhuaja/" target="_blank">
+            <Picture src={LinkedinIcon} format="svg" alt="Linkedin icon" />
+          </a>
+        </span>
         <div>
           <!-- Tecnologias -->
           <p class="text-xl font-bold">Use in development</p>
