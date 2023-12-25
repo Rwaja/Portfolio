@@ -4,6 +4,7 @@ import ProfileImg from "../assets/pngegg.png";
 import EmailIcon from "../assets/email-icon.astro";
 import GithubIcon from "../assets/github-icon.astro";
 import LinkedinIcon from "../assets/linkedin-icon.astro";
+import Card from "./Card.astro";
 ---
 
 <main class="mt-[8vh]">
@@ -153,17 +154,19 @@ import LinkedinIcon from "../assets/linkedin-icon.astro";
   
   <section
   id="proyects"
-  class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-blue-700"
+  class="scroll-mt-[8vh] flex justify-center h-auto bg-blue-700"
 >
 <!-- TODO: Crear un componente Card y mostrar mis proyectos-->
 <div
-    class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16"
+    class=" md:justify-center md:items-center w-[80%] h-[100%]"
   >
-    <div class="flex">
-      <div></div>
+  <h1 class="text-xl">Proyects</h1>
+  <div class="flex flex-col  gap-16">
+      <Card title="Adventist on the map" description="Adventists on the map is a web application that allows you to connect Adventist people and their services with people from all over the world. This was the first project with a real client. The application is still in development!" image="/AOTM-logo.jpeg" url="http://adventistonthemap.com" urlGithub="https://github.com/vicenzogiordana/advOnTheMap"/>
+
+
       <div></div>
     </div>
-    <h1 class="text-xl">Proyects</h1>
   </div>
 </section>
 <section
