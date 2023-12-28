@@ -1,0 +1,16 @@
+---
+import NextIcon from "../assets/next-icon.astro";
+import TsIcon from "../assets/ts-icon.astro";
+import NodeIcon from "../assets/node-icon.astro";
+import TailwindIcon from "../assets/tailwind-icon.astro";
+import ReactIcon from "../assets/react-icon.astro";
+import AstroIcon from "../assets/astro-icon.astro";
+const { next, ts, node,tailwind,react,astro} = Astro.props;
+---
+
+{next && <NextIcon />}
+{astro && <AstroIcon />}
+{ts && <TsIcon />}
+{node && <NodeIcon />}
+{tailwind && <TailwindIcon />}
+{react && <ReactIcon />}

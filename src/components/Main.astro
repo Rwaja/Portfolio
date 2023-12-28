@@ -10,7 +10,7 @@ import Card from "./Card.astro";
 <main class="mt-[8vh]">
   <section
     id="home"
-    class="scroll-mt-[8vh] flex justify-center h-auto md:h-[92vh] bg-white"
+    class="scroll-mt-[8vh] flex justify-center h-auto md:h-[92vh] bg-white text-4xl "
   >
     <!-- TODO: Conseguir una buena foto-->
     <hero class="flex justify-center w-[100%] h-[100%] md:h-[75%]">
@@ -19,13 +19,13 @@ import Card from "./Card.astro";
       >
         <div class="w-auto h-auto mt-5">
           <div class="pt-1">
-            <h1 class="text-lg font-bold">
-              HI, I'M <span class="name">RODRIGO</span>
+            <h1>
+            <span class="font-medium">RODRIGO HUAJAMAITA</span>
             </h1>
-            <h2 class="font-medium text-base">
+            <h2 class="font-extralight text-2xl">
               on the path of web development
             </h2>
-            <p>
+            <p class="font-extralight text-lg">
               freelance web developer and systems engineering student.
             </p>
           </div>
@@ -54,13 +54,14 @@ import Card from "./Card.astro";
   </section>
   <section
     id="about"
-    class="scroll-mt-[8vh] flex justify-center h-auto bg-white"
+    class="scroll-mt-[8vh] flex justify-center h-auto bg-white text-lg font-extralight"
   >
     <!-- TODO: Arreglar SVG de Email-->
     <article class="flex justify-center w-[100%] h-[100%] md:h-[75%]">
       <div class="flex flex-col md:flex-row items-center w-[80%] gap-6 md:gap-24">
         <div>
-          <p class="font-extrabold">About.</p>
+          <p class="font-extrabold text-5xl">About.</p>
+          </br>
           <p>
             I'm Rodrigo &#x1F44B;, I joined the world of web development at the
             beginning of 2023 and discovered one of the things that I am most
@@ -69,7 +70,7 @@ import Card from "./Card.astro";
             <br />
              I currently live in Argentina, where I am a systems engineering
             student, in my 4th year, at the Universidad Adventista de la Plata,
-            where I am a freelance web developer &#x1F4BB;. I am also looking
+            where I am a freelance web developer &#x1F4BB; also looking
             for new opportunities that can help me grow as a person and
             professional!
           </p>
@@ -89,61 +90,61 @@ import Card from "./Card.astro";
         <div class="md:w-auto md:h-[75%]">
           <!-- Tecnologias -->
           <p class="text-xl font-bold">Use in development</p>
-          <div class="flex flex-wrap gap-3 h-auto">
+          <div class="flex flex-wrap gap-3 h-auto text-base">
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Next</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Astro</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Typescript</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Javascript</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >React</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Node</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >MongoDB</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Prisma</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Mongoose</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Github</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Tailwind</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Express</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >HTML</span
             >
             <span
-              class="bg-gray-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >CSS</span
             >
           </div>
@@ -159,12 +160,13 @@ import Card from "./Card.astro";
 <div
     class=" md:justify-center md:items-center w-[80%] h-[100%]"
   >
-  <h1 class="text-xl">Proyects</h1>
+  <h1>Proyects.</h1>
   <div class="flex flex-col  gap-16">
-      <Card title="Adventist on the map" description="Adventists on the map is a web application that allows you to connect Adventist people and their services with people from all over the world. This was the first project with a real client. The application is still in development!" image="/AOTM-logo.jpeg" url="http://adventistonthemap.com" urlGithub="https://github.com/vicenzogiordana/advOnTheMap"/>
+      <Card title="Adventist on the map" description="Adventists on the map is a web application that allows you to connect Adventist people and their services with people from all over the world. This was the first project with a real client. The application is still in development!" image="/AOTM-logo.jpeg" url="http://adventistonthemap.com" urlGithub="https://github.com/vicenzogiordana/advOnTheMap" repo={false} next={true} ts={true} node={true} tailwind={true} react={true}/>
       
-      <Card title="The Friends Lengugage Club" description="The Friends Club is a web application that coordinates classes between teachers and students remotely. It is the first project in which I am involved voluntarily, it is still in development, it will soon be implemented in Kyrgyzstan." image="/Friendsclub.jpeg" url="http://adventistonthemap.com" urlGithub="https://github.com/vicenzogiordana/advOnTheMap"/>
-
+      <Card title="The Friends Lengugage Club" description="The Friends Club is a web application that coordinates classes between teachers and students remotely. It is the first project in which I am involved voluntarily, it is still in development, it will soon be implemented in Kyrgyzstan." image="/Friendsclub.jpeg" url="https://thefriendslanguageclub.vercel.app" urlGithub="https://github.com/vicenzogiordana/advOnTheMap" repo={false} next={true} ts={true} node={true} tailwind={true} react={true}/>
+      
+      <Card title="Portfolio" description="Project developed by me from scratch, not much explanation is necessary why you are here" image="/PORFOLIO-LOGO.jpg" url="https://thefriendslanguageclub.vercel.app" urlGithub="https://github.com/vicenzogiordana/advOnTheMap" repo={true} next={false} astro={true} ts={true} node={true} tailwind={true} react={false}/>
       <div></div>
     </div>
   </div>
@@ -181,3 +183,8 @@ import Card from "./Card.astro";
 </div>
 </section>
 </main>
+<style>
+  main{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+</style>

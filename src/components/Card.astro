@@ -1,6 +1,21 @@
 ---
-import { Picture } from "astro:assets";
-const {title, description, image, url, urlGithub} = Astro.props;
+import Tecnologias from "./Tecnologias.astro";
+import VisitIcon from "../assets/visit-icon.astro";
+import CodeIcon from "../assets/code-icon.astro";
+const {
+  title,
+  description,
+  image,
+  url,
+  urlRepo,
+  repo,
+  next,
+  ts,
+  node,
+  tailwind,
+  react,
+  astro
+} = Astro.props;
 ---
 
 <article
@@ -25,16 +40,38 @@ const {title, description, image, url, urlGithub} = Astro.props;
         <h1
           class="block mt-1 text-lg leading-tight font-medium text-black hover:underline"
         >
-          { title }
+          {title}
         </h1>
       </div>
       <div class="mt-2 text-gray-500">
-        { description}
+        {description}
       </div>
-      <div class="mt-4 flex gap-4">
-        <a class="text-blue-600 hover:text-blue-500" href={url} target="_blank"> View Project</a>
-        <a class="text-blue-600 hover:text-blue-500" href={urlGithub} target="_blank"> GitHub Repo</a>
+      <div class="mb-10 flex gap-4">
+        <a
+          class="text-blue-600 hover:text-blue-500 mt-2"
+          href={url}
+          target="_blank"
+          ><VisitIcon />
+        </a>
+        <a
+          class="text-blue-600 hover:text-blue-500"
+          href={urlRepo}
+          target="_blank"
+        >
+          {repo && <CodeIcon />}
+        </a>
+      </div>
+      <div class="flex gap-6 mt-2">
+        <Tecnologias
+          ts={ts}
+          next={next}
+          node={node}
+          tailwind={tailwind}
+          react={react}
+          astro={astro}
+        />
       </div>
     </div>
   </div>
 </article>
+
