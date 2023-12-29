@@ -13,7 +13,7 @@ import Card from "./Card.astro";
     class="scroll-mt-[8vh] flex justify-center h-auto md:h-[92vh] bg-white text-4xl "
   >
     <!-- TODO: Conseguir una buena foto-->
-    <hero class="flex justify-center w-[100%] h-[100%] md:h-[75%]">
+    <hero class="flex justify-center w-[100%] h-[100%] md:h-[75%] mb-20">
       <div
         class="flex flex-col md:pt-[0] md:flex-row md:justify-center md:items-center w-[80%] md:w-[685px] h-auto md:h-[100%] gap-16"
       >
@@ -54,14 +54,13 @@ import Card from "./Card.astro";
   </section>
   <section
     id="about"
-    class="scroll-mt-[8vh] flex justify-center h-auto bg-white text-lg font-extralight"
+    class="scroll-mt-[8vh] flex justify-center h-auto bg-white text-base font-extralight"
   >
     <!-- TODO: Arreglar SVG de Email-->
-      <div class="flex flex-col md:flex-row items-center w-[80%] gap-6 md:gap-24">
-        <div>
-          <p class="font-extrabold text-5xl">About.</p>
-          </br>
-          <p>
+      <div class="flex flex-col md:flex-row items-center mb-20 w-[80%] gap-6">
+        <div class="mb-10 w-[100%] md:w-[615px]">
+          <p class="font-extrabold text-5xl my-6">About.</p>
+          <p class="text-2xl">
             I'm Rodrigo &#x1F44B;, I joined the world of web development at the
             beginning of 2023 and discovered one of the things that I am most
             passionate about and that is web development &#x1F680;.
@@ -74,7 +73,7 @@ import Card from "./Card.astro";
             professional!
           </p>
           <span class="flex gap-3 pt-5"
-            ><p class="font-bold">My links &#x1F449;</p>
+            ><p class="font-bold text-2xl">My links &#x1F449;</p>
             <a href="#contact">
               <EmailIcon />
             </a>
@@ -88,63 +87,66 @@ import Card from "./Card.astro";
         </div>
         <div class="md:w-auto md:h-[75%]">
           <!-- Tecnologias -->
-          <p class="text-xl font-bold">Use in development</p>
-          <div class="flex flex-wrap gap-3 h-auto text-base">
+          <p class="text-3xl text-center font-bold mb-5">Use in development</p>
+          <div class="grid grid-cols-4 gap-6 items-center justify-items-center h-auto w-[100%] font-semibold text-base">
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-              >Next</span
-            >
-            <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-              >Astro</span
-            >
-            <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Typescript</span
             >
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              >Next</span
+            >
+            <span
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              >Astro</span
+              >
+            <span
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Javascript</span
             >
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              >MongoDB</span
+            >
+            
+            <span
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >React</span
             >
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Node</span
             >
+            
+            
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-              >MongoDB</span
-            >
-            <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-              >Prisma</span
-            >
-            <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Mongoose</span
             >
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-              >Github</span
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              >Prisma</span
             >
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-              >Tailwind</span
+            class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+            >Tailwind</span
             >
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+              class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Express</span
             >
+            
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-              >HTML</span
+            class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+            >Github</span
             >
             <span
-              class="bg-gray-100 text-gray-800  font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-              >CSS</span
+              class="bg-gray-100 text-gray-800 col-start-2 font-semibold px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+            >CSS</span>
+            <span
+            class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
+            >HTML5</span
             >
           </div>
      </div>
@@ -159,7 +161,7 @@ import Card from "./Card.astro";
 <div
     class=" md:justify-center md:items-center w-[80%] h-[100%]"
   >
-  <h1>Proyects.</h1>
+  <p class="font-extrabold text-5xl my-6">Proyects.</p>
   <div class="flex flex-col  gap-16">
       <Card title="Adventist on the map" description="Adventists on the map is a web application that allows you to connect Adventist people and their services with people from all over the world. This was the first project with a real client. The application is still in development!" image="/AOTM-logo.jpeg" url="http://adventistonthemap.com" urlGithub="https://github.com/vicenzogiordana/advOnTheMap" repo={false} next={true} ts={true} node={true} tailwind={true} react={true}/>
       
