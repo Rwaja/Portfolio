@@ -10,23 +10,23 @@ import Card from "./Card.astro";
 <main class="mt-[8vh]">
   <section
     id="home"
-    class="scroll-mt-[8vh] flex justify-center h-auto md:h-[92vh] bg-white text-4xl "
+    class="scroll-mt-[8vh] flex justify-center h-auto md:h-[92vh]"
   >
     <!-- TODO: Conseguir una buena foto-->
     <hero class="flex justify-center w-[100%] h-[100%] md:h-[75%] mb-20">
       <div
-        class="flex flex-col md:pt-[0] md:flex-row md:justify-center md:items-center w-[80%] md:w-[685px] h-auto md:h-[100%] gap-16"
+        class="flex flex-col md:pt-[0] md:flex-row md:justify-center md:items-center w-[80%] h-auto md:h-[100%] gap-16"
       >
-        <div class="w-auto h-auto mt-5">
+        <div class="w-auto md:w-[615px] h-auto mt-5">
           <div class="pt-1">
             <h1>
-            <span class="font-medium">RODRIGO HUAJAMAITA</span>
+            <span class="font-medium text-5xl">RODRIGO HUAJAMAITA</span>
             </h1>
-            <h2 class="font-extralight text-2xl">
-              on the path of web development
+            <h2 class="font-extralight text-3xl">
+              ON THE PATH OF WEB DEVELOPMENT
             </h2>
-            <p class="font-extralight text-lg">
-              freelance web developer and systems engineering student.
+            <p class="font-extralight text-2xl">
+              Freelance web developer and systems engineering student.
             </p>
           </div>
           <div class="flex pt-3 md:pt-5 gap-6 w-[100%] h-[20%] text-white">
@@ -54,7 +54,7 @@ import Card from "./Card.astro";
   </section>
   <section
     id="about"
-    class="scroll-mt-[8vh] flex justify-center h-auto bg-white text-base font-extralight"
+    class="scroll-mt-[8vh] flex justify-center h-auto text-base font-extralight"
   >
     <!-- TODO: Arreglar SVG de Email-->
       <div class="flex flex-col md:flex-row items-center mb-20 w-[80%] gap-6">
@@ -72,8 +72,10 @@ import Card from "./Card.astro";
             for new opportunities that can help me grow as a person and
             professional!
           </p>
-          <span class="flex gap-3 pt-5"
-            ><p class="font-bold text-2xl">My links &#x1F449;</p>
+          <span class="flex gap-3 pt-5 w-auto"
+            ><p class="font-bold text-2xl">My links
+              <span class="">&#x1F449;</span>
+            </p> 
             <a href="#contact">
               <EmailIcon />
             </a>
@@ -88,7 +90,7 @@ import Card from "./Card.astro";
         <div class="md:w-auto md:h-[75%]">
           <!-- Tecnologias -->
           <p class="text-3xl text-center font-bold mb-5">Use in development</p>
-          <div class="grid grid-cols-4 gap-6 items-center justify-items-center h-auto w-[100%] font-semibold text-base">
+          <div class="grid grid-cols-4 gap-6 md:gap-4 items-center justify-items-center h-auto w-[100%] font-semibold text-base">
             <span
               class="bg-gray-100 text-gray-800 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
               >Typescript</span
@@ -155,7 +157,7 @@ import Card from "./Card.astro";
   
   <section
   id="proyects"
-  class="scroll-mt-[8vh] flex justify-center h-auto bg-blue-700"
+  class="scroll-mt-[8vh] flex justify-center h-auto"
 >
 <!-- TODO: Crear un componente Card y mostrar mis proyectos-->
 <div
@@ -174,7 +176,7 @@ import Card from "./Card.astro";
 </section>
 <section
   id="contact"
-  class="scroll-mt-[8vh] flex justify-center h-[92vh] bg-green-700"
+  class="scroll-mt-[8vh] flex justify-center h-[92vh]"
   >
   <!-- TODO: Formas de onerse en contacto conmigo y respectivas redes sociales -->
   <div
@@ -186,6 +188,8 @@ import Card from "./Card.astro";
 </main>
 <style>
   main{
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #111;
 }
+
 </style>
