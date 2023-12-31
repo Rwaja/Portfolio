@@ -14,64 +14,59 @@ const {
   node,
   tailwind,
   react,
-  astro
+  astro,
 } = Astro.props;
 ---
 
 <article
-  class="max-w-xs mx-auto w-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-4xl"
+  class="max-w-xs mx-auto w-auto bg-white rounded-xl shadow-md overflow-hidden md:flex md:max-w-4xl"
 >
-  <div class="md:flex">
-    <div class="md:flex-shrink-0">
-      <img
-        alt="Man looking at item at a store"
-        class="h-full w-full object-cover md:w-72"
-        height="300"
-        src={image}
-        style={{
-          aspectRatio: "300/300",
-          objectFit: "cover",
-        }}
-        width="300"
+  <div class="md:flex-shrink-0">
+    <img
+      alt="Man looking at item at a store"
+      class="h-full w-full object-cover md:w-72"
+      height="300"
+      src={image}
+      style={{
+        aspectRatio: "300/300",
+        objectFit: "cover",
+      }}
+      width="300"
+    />
+  </div>
+  <div class="p-8">
+    <div>
+      <h1 class="block mt-1 text-4xl font-extralight text-black">
+        {title}
+      </h1>
+    </div>
+    <div class="mt-2 text-base font-light text-gray-500">
+      {description}
+    </div>
+    <div class="flex gap-6 mt-5">
+      <Tecnologias
+        ts={ts}
+        next={next}
+        node={node}
+        tailwind={tailwind}
+        react={react}
+        astro={astro}
       />
     </div>
-    <div class="p-8">
-      <div>
-        <h1
-          class="block mt-1 text-4xl font-extralight text-black"
-        >
-          {title}
-        </h1>
-      </div>
-      <div class="mt-2 text-base font-light text-gray-500">
-        {description}
-      </div>
-      <div class="flex gap-6 mt-5">
-        <Tecnologias
-          ts={ts}
-          next={next}
-          node={node}
-          tailwind={tailwind}
-          react={react}
-          astro={astro}
-        />
-      </div>
-      <div class="mt-10 flex gap-4">
-        <a
-          class="text-blue-600 hover:text-blue-500 mt-2"
-          href={url}
-          target="_blank"
-          ><VisitIcon />
-        </a>
-        <a
-          class="text-blue-600 hover:text-blue-500"
-          href={urlRepo}
-          target="_blank"
-        >
-          {repo && <CodeIcon />}
-        </a>
-      </div>
+    <div class="mt-10 flex gap-4">
+      <a
+        class="text-blue-600 hover:text-blue-500 mt-2"
+        href={url}
+        target="_blank"
+        ><VisitIcon />
+      </a>
+      <a
+        class="text-blue-600 hover:text-blue-500"
+        href={urlRepo}
+        target="_blank"
+      >
+        {repo && <CodeIcon />}
+      </a>
     </div>
   </div>
 </article>
-
