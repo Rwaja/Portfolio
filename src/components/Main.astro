@@ -7,6 +7,7 @@ import LinkedinIcon from "../assets/linkedin-icon.astro";
 import Card from "./Card.astro";
 import Separator from "./Separator.astro";
 import Tech from "./Tech.astro";
+import Presentation from "./Presentation.astro";
 ---
 
 <main class="mt-[8vh]">
@@ -64,102 +65,75 @@ import Tech from "./Tech.astro";
       <Separator />
     </div>
     <div class="flex flex-col md:flex-row mb-20 w-[80%] gap-6">
-      <div class="mb-10 w-[100%] md:w-[615px] mr-20">
-        <p class="text-2xl">
-          &#x1F44B; I'm Rodrigo, i joined the world of web development at the
-          beginning of 2023 and discovered one of the things that I am most
-          passionate about and that is web development &#x1F680;.
-          <br />
-          <br />
-           I currently live in Argentina, where I am a systems engineering
-          student, in my 4th year, at the Universidad Adventista de la Plata,
-          where i am a freelance web developer &#x1F4BB;, also looking for new
-          opportunities that can help me grow as a person and professional!
-        </p>
-        <span class="flex gap-3 pt-5 w-auto"
-          ><p class="font-bold text-2xl">
-            My links
-            <span class="">&#x1F449;</span>
-          </p>
-          <a href="#contact">
-            <EmailIcon />
-          </a>
-          <a href="https://github.com/Rwaja" target="_blank">
-            <GithubIcon />
-          </a>
-          <a href="https://linkedin.com/in/rhuaja/" target="_blank">
-            <LinkedinIcon />
-          </a>
-        </span>
-      </div>
-      <Tech/>
-      </div>
-    </div>
-  </section>
-
-  <section id="proyects" class="scroll-mt-[8vh] flex justify-center h-auto">
-    <!-- TODO: Crear un componente Card y mostrar mis proyectos-->
-    <div class="md:justify-center md:items-center w-[80%] h-[100%]">
-      <div class="flex justify-center items-center w-auto md:w-[100%]">
-        <Separator />
-        <p class="font-semibold text-5xl my-6">PROYECTS</p>
-      </div>
-      <div class="flex flex-col gap-16">
-        <Card
-          title="ADVENTIST ON THE MAP"
-          description="ADVENTISTS ON THE MAP IS A WEB APPLICATION THAT ALLOWS YOU TO CONNECT ADVENTIST PEOPLE AND THEIR SERVICES WITH PEOPLE FROM ALL OVER THE WORLD. THIS WAS THE FIRST PROJECT WITH A REAL CLIENT. THE APPLICATION IS STILL IN DEVELOPMENT!"
-          image="/AOTM.png"
-          url="http://adventistonthemap.com"
-          urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
-          repo={false}
-          next={true}
-          ts={true}
-          node={true}
-          tailwind={true}
-          react={true}
-        />
-
-        <Card
-          title="THE FRIENDS LANGUAGE CLUB"
-          description="THE FRIENDS CLUB IS A WEB APPLICATION THAT COORDINATES CLASSES BETWEEN TEACHERS AND STUDENTS REMOTELY. IT IS THE FIRST PROJECT IN WHICH I AM INVOLVED VOLUNTARILY. IT IS STILL IN DEVELOPMENT AND WILL SOON BE IMPLEMENTED IN KYRGYZSTAN."
-          image="/TheFriends.jpeg"
-          url="https://thefriendslanguageclub.vercel.app"
-          urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
-          repo={false}
-          next={true}
-          ts={true}
-          node={true}
-          tailwind={true}
-          react={true}
-        />
-
-        <Card
-          title="PORTFOLIO"
-          description="SIMPLE PORTFOLIO FULL RESPOSIVE, IT'S ABOUT ME, WITH THE GOAL OF BEING ABLE TO FIND A STABLE JOB. YOU'RE HERE!"
-          image="/PORFOLIO-LOGO.jpg"
-          url="https://thefriendslanguageclub.vercel.app"
-          urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
-          repo={true}
-          next={false}
-          astro={true}
-          ts={true}
-          node={true}
-          tailwind={true}
-          react={false}
-        />
-        <div></div>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="scroll-mt-[8vh] flex justify-center h-[92vh]">
-    <!-- TODO: Formas de onerse en contacto conmigo y respectivas redes sociales -->
-    <div
-      class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16"
-    >
-      <h1 class="text-xl">Contact</h1>
+      <Presentation/>
+      <Tech />
     </div>
   </section>
 </main>
+
+<section id="proyects" class="scroll-mt-[8vh] flex justify-center h-auto">
+  <!-- TODO: Crear un componente Card y mostrar mis proyectos-->
+  <div class="md:justify-center md:items-center w-[80%] h-[100%]">
+    <div class="flex justify-center items-center w-auto md:w-[100%]">
+      <Separator />
+      <p class="font-semibold text-5xl my-6">PROYECTS</p>
+    </div>
+    <div class="flex flex-col gap-16">
+      <Card
+        title="ADVENTIST ON THE MAP"
+        description="ADVENTISTS ON THE MAP IS A WEB APPLICATION THAT ALLOWS YOU TO CONNECT ADVENTIST PEOPLE AND THEIR SERVICES WITH PEOPLE FROM ALL OVER THE WORLD. THIS WAS THE FIRST PROJECT WITH A REAL CLIENT. THE APPLICATION IS STILL IN DEVELOPMENT!"
+        image="/AOTM.png"
+        url="http://adventistonthemap.com"
+        urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
+        repo={false}
+        next={true}
+        ts={true}
+        node={true}
+        tailwind={true}
+        react={true}
+      />
+
+      <Card
+        title="THE FRIENDS LANGUAGE CLUB"
+        description="THE FRIENDS CLUB IS A WEB APPLICATION THAT COORDINATES CLASSES BETWEEN TEACHERS AND STUDENTS REMOTELY. IT IS THE FIRST PROJECT IN WHICH I AM INVOLVED VOLUNTARILY. IT IS STILL IN DEVELOPMENT AND WILL SOON BE IMPLEMENTED IN KYRGYZSTAN."
+        image="/TheFriends.jpeg"
+        url="https://thefriendslanguageclub.vercel.app"
+        urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
+        repo={false}
+        next={true}
+        ts={true}
+        node={true}
+        tailwind={true}
+        react={true}
+      />
+
+      <Card
+        title="PORTFOLIO"
+        description="SIMPLE PORTFOLIO FULL RESPOSIVE, IT'S ABOUT ME, WITH THE GOAL OF BEING ABLE TO FIND A STABLE JOB. YOU'RE HERE!"
+        image="/PORFOLIO-LOGO.jpg"
+        url="https://thefriendslanguageclub.vercel.app"
+        urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
+        repo={true}
+        next={false}
+        astro={true}
+        ts={true}
+        node={true}
+        tailwind={true}
+        react={false}
+      />
+      <div></div>
+    </div>
+  </div>
+</section>
+<section id="contact" class="scroll-mt-[8vh] flex justify-center h-[92vh]">
+  <!-- TODO: Formas de onerse en contacto conmigo y respectivas redes sociales -->
+  <div
+    class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16"
+  >
+    <h1 class="text-xl">Contact</h1>
+  </div>
+</section>
+
 <style>
   main {
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
