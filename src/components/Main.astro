@@ -65,7 +65,7 @@ import Presentation from "./Presentation.astro";
       <Separator />
     </div>
     <div class="flex flex-col md:flex-row mb-20 w-[80%] gap-6">
-      <Presentation/>
+      <Presentation />
       <Tech />
     </div>
   </section>
@@ -127,10 +127,18 @@ import Presentation from "./Presentation.astro";
 </section>
 <section id="contact" class="scroll-mt-[8vh] flex justify-center h-[92vh]">
   <!-- TODO: Formas de ponerse en contacto conmigo y respectivas redes sociales -->
-  <div
-    class="flex flex-col items-center justify-center md:flex-row md:justify-center md:items-center w-[80%] h-[100%] gap-16"
-  >
-    <h1 class="text-xl">Contact</h1>
+  <div class="md:justify-center md:items-center w-[80%] h-[100%]">
+    <div class="flex justify-center items-center w-auto md:w-[100%]">
+      <p class="font-semibold text-5xl my-6">CONTACT</p>
+      <Separator />
+    </div>
+    <div class="flex flex-col justify-center items-center h-[80%] gap-5 text-center">
+      <p class="text-2xl">Send me an email to contact me, you can also find me on<a href="https://linkedin.com/in/rhuaja/" target="_blank" class="text-blue-600">
+        LinkedIn.</a><p>
+      <div class="flex gap-2 hover:text-blue-600 duration-300">
+        <EmailIcon />
+        <p class="text-2xl font-bold">rhuajamaita@gmail.com</p>
+      </div>
+    </div>
   </div>
 </section>
-
