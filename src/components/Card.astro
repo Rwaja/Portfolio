@@ -1,8 +1,9 @@
 ---
-import Tecnologias from "./Tecnologias.astro";
+import Tecnologias from "./Stack.astro";
 import VisitIcon from "../assets/visit-icon.astro";
 import CodeIcon from "../assets/code-icon.astro";
 import Separator from "./Separator.astro";
+import Stack from "./Stack.astro";
 const {
   title,
   description,
@@ -51,7 +52,7 @@ const {
     <div
       class="flex-grow flex flex-wrap gap-6 p-1 border-2 border-border-color h-auto mx-auto w-auto rounded-3xl justify-center mt-5"
     >
-      <Tecnologias
+      <Stack
         ts={ts}
         next={next}
         node={node}
