@@ -18,19 +18,19 @@ import Presentation from "./Presentation.astro";
     <!-- TODO: Conseguir una buena foto y arreglar dimenciones del div, actualizar el color de los svg y buscar un segundo color principal secundario para darle mas estilo a la pagina-->
     <hero class="flex justify-center w-[100%] h-[100%] md:h-[75%] mb-20">
       <div
-        class="flex flex-col md:pt-[0] md:flex-row md:justify-center md:items-center w-[80%] h-auto md:h-[100%] gap-16"
+        class="flex flex-col md:pt-[0] md:flex-row md:justify-center md:items-center w-[90%] md:w-[80%] h-auto md:h-[100%] gap-16"
       >
         <div class="w-auto md:w-[615px] h-auto mt-5">
           <div class="pt-1">
             <h1>
-              <span class="font-medium text-5xl">RODRIGO HUAJAMAITA</span>
+              <span class="font-bold text-5xl">RODRIGO HUAJAMAITA</span>
             </h1>
-            <h2 class="font-extralight text-3xl">
-              ON THE PATH OF WEB DEVELOPMENT
+            <h2 class="font-medium text-4xl ">
+              I'm a <span class="text-blue-500 font-semibold">FREELANCE DEVELOPER</span>
             </h2>
-            <p class="font-extralight text-2xl">
-              Freelance web developer and systems engineering student.
-            </p>
+            <span class="font-extralight text-2xl">
+              ON THE PATH OF <span class="text-blue-500 font-semibold">WEB DEVELOPMENT</span>
+            </span>
           </div>
           <div class="flex pt-3 md:pt-5 gap-6 w-[100%] h-[20%] items-center text-white">
             <a href="#contact">
@@ -57,11 +57,11 @@ import Presentation from "./Presentation.astro";
   </section>
   <section
     id="about"
-    class="scroll-mt-[8vh] flex flex-col justify-center items-center h-auto text-base font-extralight"
+    class="scroll-mt-[8vh] flex gap-5 flex-col justify-center items-center h-auto text-base font-extralight"
   >
     <!-- TODO: Definir que color darle al hover de los elementos de TECH-->
     <div class="flex justify-center items-center w-[80%] md:w-[80%]">
-      <p class="font-semibold text-5xl my-6">ABOUT</p>
+      <span class="font-bold text-5xl md:text-6xl my-6">ABOUT</span><span class=" font-black text-5xl md:text-6xl text-blue-500 pr-5">.</span>
       <Separator />
     </div>
     <div class="flex flex-col md:flex-row mb-20 w-[80%] gap-6">
@@ -71,17 +71,17 @@ import Presentation from "./Presentation.astro";
   </section>
 </main>
 
-<section id="proyects" class="scroll-mt-[8vh] flex justify-center h-auto">
+<section id="proyects" class="scroll-mt-[8vh] flex gap-5 justify-center h-auto">
   <!-- TODO: Definir que fuente y color poner en en la descripcion de Card-->
   <div class="md:justify-center md:items-center w-full md:w-[80%] h-[100%]">
-    <div class="flex justify-end items-center mx-auto w-[80%] md:w-[100%]">
+    <div class="flex justify-end items-center mb-5 mx-auto w-[80%] md:w-[100%]">
       <Separator />
-      <p class="font-semibold text-5xl my-6">PROYECTS</p>
+      <span class="font-bold text-5xl md:text-6xl ml-5 my-6">PROYECTS</span><span class=" font-black text-5xl md:text-6xl text-blue-500">.</span>
     </div>
     <div class="flex flex-col gap-16">
       <Card
         title="ADVENTIST ON THE MAP"
-        description="ADVENTISTS ON THE MAP IS A WEB APPLICATION THAT ALLOWS YOU TO CONNECT ADVENTIST PEOPLE AND THEIR SERVICES WITH PEOPLE FROM ALL OVER THE WORLD. THIS WAS THE FIRST PROJECT WITH A REAL CLIENT. THE APPLICATION IS STILL IN DEVELOPMENT!"
+        description="Adventists on the Map is a web application that allows you to connect Adventist people and their services with people from all over the world. This was the first project with a real client. The application is still in development!"
         image="/AOTM.png"
         url="http://adventistonthemap.com"
         urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
@@ -95,7 +95,7 @@ import Presentation from "./Presentation.astro";
 
       <Card
         title="THE FRIENDS LANGUAGE CLUB"
-        description="THE FRIENDS CLUB IS A WEB APPLICATION THAT COORDINATES CLASSES BETWEEN TEACHERS AND STUDENTS REMOTELY. IT IS THE FIRST PROJECT IN WHICH I AM INVOLVED VOLUNTARILY. IT IS STILL IN DEVELOPMENT AND WILL SOON BE IMPLEMENTED IN KYRGYZSTAN."
+        description="The Friends Club is a web application that coordinates classes between teachers and students remotely. It is the first project in which I am involved voluntarily. It is still in development and will soon be implemented in Kyrgyzstan."
         image="/TheFriends.jpeg"
         url="https://thefriendslanguageclub.vercel.app"
         urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
@@ -105,14 +105,16 @@ import Presentation from "./Presentation.astro";
         node={true}
         tailwind={true}
         react={true}
+        mongo={true}
+        prisma={true}
       />
 
       <Card
         title="PORTFOLIO"
-        description="SIMPLE PORTFOLIO FULL RESPOSIVE, IT'S ABOUT ME, WITH THE GOAL OF BEING ABLE TO FIND A STABLE JOB. YOU'RE HERE!"
+        description="Simple portfolio, fully responsive; it's about me with the goal of finding a stable job. You're here!"
         image="/PORFOLIO-LOGO.jpg"
-        url="https://thefriendslanguageclub.vercel.app"
         urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
+        demo={false}        
         repo={true}
         next={false}
         astro={true}
@@ -135,10 +137,10 @@ import Presentation from "./Presentation.astro";
     <div class="flex flex-col justify-center items-center h-[80%] gap-5 text-center">
       <p class="text-2xl">Send me an email to contact me, you can also find me on<a href="https://linkedin.com/in/rhuaja/" target="_blank" class="text-blue-500">
         LinkedIn.</a><p>
-      <div class="flex gap-2 hover:text-blue-500">
-        <EmailIcon />
-        <p class="text-2xl font-bold">rhuajamaita@gmail.com</p>
-      </div>
+            <div class="flex gap-2 items-center hover:text-blue-500">
+              <EmailIcon />
+              <p class="text-2xl font-bold mb-1">rhuajamaita@gmail.com</p>
+            </div>
     </div>
   </div>
 </section>

@@ -8,6 +8,7 @@ const {
   description,
   image,
   url,
+  demo,
   urlRepo,
   repo,
   next,
@@ -16,6 +17,8 @@ const {
   tailwind,
   react,
   astro,
+  mongo,
+  prisma,
 } = Astro.props;
 ---
 
@@ -38,14 +41,16 @@ const {
 
   <div class="md:flex md:flex-col m-2 p-2 rounded-xl">
     <div>
-      <h1 class="block mt-1 text-4xl font-extralight ">
+      <h1 class="block mt-1 text-4xl font-semibold ">
         {title}
       </h1>
     </div>
-    <div class="mt-5 text-base font-light min-h-[96px] text-white">
+    <div class="mt-5 text-lg font-normal min-h-[96px] text-white">
       {description}
     </div>
-    <div class="flex gap-6 p-1 border-2 border-border-color mx-auto w-auto rounded-3xl justify-center mt-5">
+    <div
+      class="flex-grow flex flex-wrap gap-6 p-1 border-2 border-border-color h-auto mx-auto w-auto rounded-3xl justify-center mt-5"
+    >
       <Tecnologias
         ts={ts}
         next={next}
@@ -53,14 +58,14 @@ const {
         tailwind={tailwind}
         react={react}
         astro={astro}
+        mongo={mongo}
+        prisma={prisma}
       />
     </div>
     <div class="mt-5 flex justify-center items-center gap-4">
-      <a
-        class="text-[#ebecf3] hover:text-blue-500"
-        href={url}
-        target="_blank"
-        ><VisitIcon />
+      <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
+        >
+        {url && <VisitIcon />}
       </a>
       <a
         class="text-[#ebecf3] hover:text-blue-500"
