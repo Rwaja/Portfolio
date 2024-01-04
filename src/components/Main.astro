@@ -65,19 +65,18 @@ import Presentation from "./Presentation.astro";
     id="about"
     class="scroll-mt-[8vh] flex gap-5 flex-col justify-center items-center h-auto text-base font-extralight"
   >
-    <!-- TODO: Definir que color darle al hover de los elementos de TECH-->
+    <!-- TODO: Definir que color darle al hover de los elementos de TECH y conseguir el svg para el titulo de tech-->
     <div class="flex justify-center items-center w-[80%] md:w-[80%]">
       <span class="font-bold text-5xl md:text-6xl my-6">ABOUT</span><span
         class="font-black text-5xl md:text-6xl text-blue-500 pr-5">.</span
       >
       <Separator />
     </div>
-    <div class="flex flex-col md:flex-row mb-20 w-[80%] gap-6">
+    <div class="flex flex-col lg:flex-row mb-20 w-[80%] gap-20 md:gap-6">
       <Presentation />
       <Tech />
     </div>
   </section>
-</main>
 
 <section id="proyects" class="scroll-mt-[8vh] flex gap-5 justify-center h-auto">
   <!-- TODO: Definir que fuente y color poner en en la descripcion de Card, leve animacion de los iconos de stack-->
@@ -120,7 +119,7 @@ import Presentation from "./Presentation.astro";
 
       <Card
         title="PORTFOLIO"
-        description="Simple portfolio, fully responsive; it's about me with the goal of finding a stable job. You're here!"
+        description="Simple responsive portfolio; it's about me with the goal of finding a stable job. You're here!"
         image="/PORFOLIO-LOGO.jpg"
         urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
         demo={false}
@@ -165,3 +164,4 @@ import Presentation from "./Presentation.astro";
     </div>
   </div>
 </section>
+</main>

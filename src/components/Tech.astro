@@ -1,67 +1,77 @@
-<div class="md:w-auto h-auto md:h-[75%]">
-    <!-- Tecnologias -->
-    <p class="text-3xl text-center font-bold mb-5">Use in development</p>
-    <div
-      class="grid grid-cols-3 gap-6 md:gap-4 items-center justify-center text-center h-auto w-auto font-semibold text-base"
+---
+import DevIcon from "../assets/dev-icon.astro";
+---
+
+<div class="w-full md:w-[35%] h-auto md:h-[75%]">
+  <!-- Tecnologias -->
+  <div
+    class="flex flex-col lg:flex-row lg:mb-5 gap-2 md:gap-2 justify-center items-center w-full"
+  >
+    <DevIcon />
+    <h3 class="text-3xl font-bold mb-5 lg:mb-0 text-center pb-1">
+      Use in development
+    </h3>
+  </div>
+  <div
+    class="flex flex-wrap gap-6 md:gap-4 mx-auto justify-center items-center text-center h-auto w-[90%] md:w-full font-bold text-base"
+  >
+    <span
+      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-blue-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color"
+      >TypeScript</span
     >
-      <span
-        class="bg-[#e5e7eb] text-background-color px-1.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Typescript</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Next</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Astro</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-auto py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Javascript</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-auto py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >MongoDB</span
-      >
+    <span
+      class="bg-[#e5e7eb] text-black dark:text-black px-2.5 py-0.5 rounded-full hover:bg-black hover:text-[#e5e7eb] dark:hover:bg-black dark:hover:text-[#e5e7eb]"
+      >Next</span
+    >
+    <span
+      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-orange-500 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color"
+      >Astro</span
+    >
+    <span
+      class="bg-[#e5e7eb] text-background-color px-2.5 w-auto py-0.5 rounded-full hover:bg-yellow-500 dark:bg-[#e5e7eb] dark:text-background-color"
+      >JavaScript</span
+    >
+    <span
+    class="bg-[#e5e7eb] text-black dark:text-background-color px-2.5 py-0.5 rounded-full hover:bg-gray-800 hover:text-[#e5e7eb] dark:hover:bg-gray-800 dark:hover:text-[#e5e7eb]"
+      >Express</span
+    >
 
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >React</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Node</span
-      >
+    <span
+    class="bg-[#e5e7eb] text-black dark:text-black px-2.5 py-0.5 rounded-full hover:bg-black hover:text-[#e5e7eb] dark:hover:bg-black dark:hover:text-[#e5e7eb]"
+      >Github</span
+    >
+    <span
+      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-[#3b82f6] hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color"
+      >CSS</span
+    >
+    <span
+      class="bg-[#e5e7eb] text-background-color col-start-3 px-2.5 py-0.5 hover:bg-red-600 hover:text-[#e5e7eb] rounded-full dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-red-600 dark:hover:text-[#e5e7eb]"
+      >HTML5</span
+    >
+    <span
+    class="bg-[#e5e7eb] text-background-color col-start-3 px-2.5 py-0.5 hover:bg-red-900 hover:text-[#e5e7eb] rounded-full dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-red-900 dark:hover:text-[#e5e7eb]"
+      >Mongoose</span
+    >
+    <span
+    class="bg-[#e5e7eb] text-background-color col-start-3 px-2.5 py-0.5 hover:bg-blue-900 hover:text-[#e5e7eb] rounded-full dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-blue-900 dark:hover:text-[#e5e7eb]"
+      >Prisma</span
+    >
+    <span
+      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-teal-500  dark:bg-[#e5e7eb] dark:text-background-color"
+      >Tailwind</span
+    >
+    <span
+      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-green-500 hover:text-[#654321] dark:bg-[#e5e7eb] dark:text-background-color"
+      >MongoDB</span
+    >
 
-      <span
-      class="bg-[#e5e7eb] text-background-color px-1.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Mongoose</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Prisma</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Tailwind</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Express</span
-      >
-
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >Github</span
-      >
-      <span
-      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >CSS</span
-      >
-      <span
-        
-        class="bg-[#e5e7eb] text-background-color col-start-3 px-2.5 py-0.5 rounded-full dark:bg-[#e5e7eb] dark:text-background-color"
-        >HTML5</span
-      >
-    </div>
+    <span
+      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-blue-500 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color"
+      >React</span
+    >
+    <span
+      class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-green-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color"
+      >Node</span
+    >
+  </div>
+</div>
