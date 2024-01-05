@@ -1,8 +1,9 @@
 ---
 import DevIcon from "../assets/dev-icon.astro";
+import Separator from "./Separator.astro";
 ---
 
-<div class="w-full md:w-[35%] h-auto md:h-[75%]">
+<div class="w-full md:w-[35%] h-auto md:h-[75%] py-5 px-2 rounded-xl border border-border-color bg-background-color">
   <!-- Tecnologias -->
   <div
     class="flex flex-col lg:flex-row lg:mb-5 gap-2 md:gap-2 justify-center items-center w-full"
@@ -12,8 +13,9 @@ import DevIcon from "../assets/dev-icon.astro";
       Use in development
     </h3>
   </div>
+  <Separator />
   <div
-    class="flex flex-wrap gap-4 md:gap-4 mx-auto justify-center items-center text-center h-auto w-[90%] md:w-full font-bold text-base"
+    class="flex flex-wrap gap-4 md:gap-4 mx-auto justify-center items-center pt-5 text-center h-auto w-[90%] md:w-full font-bold text-base"
   >
     <span
       class="bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-blue-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color"

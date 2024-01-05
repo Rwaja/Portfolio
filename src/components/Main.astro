@@ -10,10 +10,10 @@ import Tech from "./Tech.astro";
 import Presentation from "./Presentation.astro";
 ---
 
-<main class="mt-[8vh]">
+<main class="mt-[6vh]">
   <section
     id="home"
-    class="scroll-mt-[8vh] flex justify-center h-auto md:h-[92vh]"
+    class="scroll-mt-[6vh] flex justify-center h-auto md:h-[92vh]"
   >
     <!-- TODO: Conseguir una buena foto y arreglar dimenciones del div-->
     <hero class="flex justify-center w-[100%] h-[100%] md:h-[75%] mb-20">
@@ -63,27 +63,27 @@ import Presentation from "./Presentation.astro";
   </section>
   <section
     id="about"
-    class="scroll-mt-[8vh] flex gap-5 flex-col justify-center items-center h-auto text-base font-extralight"
+    class="scroll-mt-[6vh] flex gap-5 flex-col justify-center items-center h-auto text-base font-extralight bg-[#101010] py-[5rem]"
   >
     <!-- TODO: Definir que color darle al hover de los elementos de TECH y conseguir el svg para el titulo de tech-->
-    <div class="flex justify-center items-center w-[80%] md:w-[80%]">
-      <span class="font-bold text-5xl md:text-6xl my-6">ABOUT</span><span
+    <div class="flex justify-center items-center w-[80%] md:w-[80%] pb-10">
+      <span class="font-bold text-5xl md:text-6xl">ABOUT</span><span
         class="font-black text-5xl md:text-6xl text-blue-500 pr-5">.</span
       >
       <Separator />
     </div>
-    <div class="flex flex-col lg:flex-row mb-20 w-[80%] gap-20 md:gap-6">
+    <div class="flex flex-col lg:flex-row w-[80%] gap-20 md:gap-4">
       <Presentation />
       <Tech />
     </div>
   </section>
 
-<section id="proyects" class="scroll-mt-[8vh] flex gap-5 justify-center h-auto">
+<section id="proyects" class="scroll-mt-[6vh] flex py-[5rem] justify-center bg-background-color h-auto">
   <!-- TODO: Definir que fuente y color poner en en la descripcion de Card, leve animacion de los iconos de stack-->
   <div class="md:justify-center md:items-center w-full md:w-[80%] h-[100%]">
-    <div class="flex justify-end items-center mb-5 mx-auto w-[80%] md:w-[100%]">
+    <div class="flex justify-end items-center mb-5 mx-auto w-[80%] md:w-[100%] pb-10">
       <Separator />
-      <span class="font-bold text-5xl md:text-6xl ml-5 my-6">PROYECTS</span
+      <span class="font-bold text-5xl md:text-6xl ml-5">PROYECTS</span
       ><span class="font-black text-5xl md:text-6xl text-blue-500">.</span>
     </div>
     <div class="flex flex-col gap-16">
@@ -135,7 +135,7 @@ import Presentation from "./Presentation.astro";
     </div>
   </div>
 </section>
-<section id="contact" class="scroll-mt-[8vh] flex justify-center h-[92vh]">
+<section id="contact" class="scroll-mt-[6vh] flex justify-center h-[92vh]">
   <!-- TODO: Formas de ponerse en contacto conmigo y respectivas redes sociales -->
   <div class="md:justify-center md:items-center w-[80%] h-[100%]">
     <div class="flex justify-center items-center w-[80%] md:w-[80%]">
