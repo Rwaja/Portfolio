@@ -1,17 +1,32 @@
 ---
 import HomeIcon from "../assets/nav-icons/home-icon.astro";
+import AboutIcon from "../assets/nav-icons/about-icon.astro";
+import ProyectIcon from "../assets/nav-icons/proyects-icon.astro";
+import ContactIcon from "../assets/nav-icons/contact-icon.astro";
 ---
 
 <!-- TODO: revisar colores de texto hover y poner svgs minimalistas-->
 <header class="fixed z-10 top-0 w-full h-[6vh] flex justify-center">
   <nav class="flex gap-6 items-center text-[#b7b8c2]">
     <div class="flex gap-2 font-normal text-sm">
-      <a href="#home" class="nav-btn">Home</a>
-      <a href="#about" class="nav-btn">About</a>
-      <a href="#proyects" class="nav-btn">Proyects</a>
+      <a href="#home" class="nav-btn"
+        ><span class="nav-btn-content">
+          <HomeIcon />Home
+        </span></a
+      >
+      <a href="#about" class="nav-btn"
+        ><span class="nav-btn-content">
+          <AboutIcon />About
+        </span></a
+      >
+      <a href="#proyects" class="nav-btn"
+        ><span class="nav-btn-content">
+          <ProyectIcon />Proyects
+        </span></a
+      >
       <a href="#contact" class="nav-btn"
-        ><span class="flex w-full items-center justify-center gap-1">
-          <HomeIcon />Contact
+        ><span class="nav-btn-content">
+          <ContactIcon />Contact
         </span>
       </a>
     </div>
