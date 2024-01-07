@@ -21,9 +21,9 @@ import Presentation from "./Presentation.astro";
         class="flex flex-col md:pt-[0] md:flex-row md:justify-center md:items-center w-[90%] md:w-[80%] h-auto md:h-[100%] gap-16"
       >
         <div class="w-auto md:w-[615px] h-auto mt-5">
-          <div class="pt-1">
+          <div class="pt-1 text-center">
             <h1>
-              <span class="font-bold text-5xl">RODRIGO HUAJAMAITA</span>
+              <span class="font-bold text-5xl sm:text-5xl">RODRIGO HUAJAMAITA</span>
             </h1>
             <h2 class="font-medium text-4xl">
               I'm a <span class="text-blue-500 font-semibold"
@@ -37,7 +37,7 @@ import Presentation from "./Presentation.astro";
             </span>
           </div>
           <div
-            class="flex pt-3 md:pt-5 gap-6 w-[100%] h-[20%] items-center text-white"
+            class="flex pt-3 md:pt-5 gap-6 w-[100%] h-[20%] items-center justify-center text-white"
           >
             <a href="#contact">
               <EmailIcon />
@@ -63,7 +63,7 @@ import Presentation from "./Presentation.astro";
   </section>
   <section
     id="about"
-    class="scroll-mt-[6vh] flex gap-5 flex-col justify-center items-center h-auto text-base font-extralight bg-[#101010] pl-[5rem] pt-[2rem]"
+    class="scroll-mt-[6vh] flex gap-5 flex-col justify-center items-center h-auto text-base font-extralight bg-[#101010] pb-[5rem] pt-[2rem]"
   >
     <!-- TODO: actualizar contenido-->
     <div class="flex justify-center items-center w-[80%] md:w-[80%] pb-10">
@@ -72,7 +72,7 @@ import Presentation from "./Presentation.astro";
       >
       <Separator />
     </div>
-    <div class="flex flex-col lg:flex-row w-[80%] gap-20 md:gap-4">
+    <div class="flex flex-col lg:flex-row w-full md:w-[80%] gap-20 md:gap-4">
       <Presentation />
       <Tech />
     </div>
@@ -80,8 +80,8 @@ import Presentation from "./Presentation.astro";
 
 <section id="proyects" class="scroll-mt-[6vh] flex pb-[5rem] pt-[2rem] justify-center bg-[#101010] h-auto">
   <!-- TODO: arreglar card portfolio-->
-  <div class="md:justify-center md:items-center w-full md:w-[80%] h-[100%]">
-    <div class="flex justify-end items-center mb-5 mx-auto w-[80%] md:w-[100%] pb-10">
+  <div class="md:w-[80%] h-[100%]">
+    <div class="flex justify-end items-center mx-auto mb-5 w-[80%] md:w-[100%] pb-10">
       <Separator />
       <span class="font-bold text-5xl md:text-6xl ml-5">PROYECTS</span
       ><span class="font-black text-5xl md:text-6xl text-blue-500">.</span>
