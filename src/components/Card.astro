@@ -4,6 +4,7 @@ import VisitIcon from "../assets/visit-icon.astro";
 import CodeIcon from "../assets/code-icon.astro";
 import Separator from "./Separator.astro";
 import Stack from "./Stack.astro";
+import Badge from "./badge.astro";
 const {
   title,
   description,
@@ -24,7 +25,7 @@ const {
 ---
 
 <article
-  class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:max-w-4xl border border-border-color hover:shadow-blue duration-700 shadow-2xl"
+  class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:max-w-4xl border-2 border-border-color hover:shadow-blue duration-700 shadow-2xl"
 >
   <div class="hover:origin-bottom hover:-rotate-3 duration-200 md:flex-shrink-0 md:my-auto m-2 border-2 border-background-color">
     <img
@@ -41,17 +42,29 @@ const {
   </div>
 
   <div class="md:flex md:flex-col p-1 ml-2 rounded-xl">
-    <div class="mt-1 text-4xl font-semibold">
+    <div class="my-5 text-center text-4xl font-bold">
       <h1>
         {title}
       </h1>
     </div>
+    <Separator/>
+    <div  class="flex-grow flex justify-center flex-wrap gap-2 p-1 h-auto w-auto rounded-3xl mt-5 pb-5 ">
+      <Badge name="Beta" status={"orange"}/>
+      <Badge name="Developing" status={"green"}/>
+      <Badge name="FrontEnd" status={"blue"}/>
+    </div>
     <div class="mt-5 text-lg font-normal min-h-[96px]">
       {description}
     </div>
-    <div
-      class="flex-grow flex flex-wrap gap-6 p-1 border-2 bg-background-color border-border-color h-auto mx-auto w-auto rounded-3xl justify-center mt-5 "
-    >
+    <div>
+      <div>
+
+      </div>
+      <div>
+        <h3 class="text-center text-3xl font-semibold">STACK</h3>
+        <div
+        class="flex-grow flex flex-wrap gap-2 p-1 border-2 bg-background-color border-border-color h-auto mx-auto w-auto md:w-[90%] rounded-3xl justify-center mt-5 "
+      >
       <Stack
         ts={ts}
         next={next}
@@ -63,9 +76,11 @@ const {
         prisma={prisma}
       />
     </div>
+  </div>
+  </div>
     <div class="mt-5 flex justify-center items-center gap-4">
       <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
-        >
+      >
         {url && <VisitIcon />}
       </a>
       <a

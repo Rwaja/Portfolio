@@ -7,14 +7,65 @@ import ReactIcon from "../assets/react-icon.astro";
 import AstroIcon from "../assets/astro-icon.astro";
 import MongoIcon from "../assets/mongo-icon.astro";
 import PrismaIcon from "../assets/prisma-icon.astro";
-const { next, ts, node, tailwind, react, astro, mongo, prisma} = Astro.props;
+import Badge from "./badge.astro";
+const { next, ts, node, tailwind, react, astro, mongo, prisma } = Astro.props;
 ---
 
-{next && <div class="transition ease-linear hover:scale-110 duration-75"><NextIcon /></div>}
-{astro && <div class="transition ease-linear hover:scale-110 duration-75"><AstroIcon /></div>}
-{ts && <div class="transition ease-linear hover:scale-110 duration-75"><TsIcon /></div>}
-{node && <div class="transition ease-linear hover:scale-110 duration-75"><NodeIcon /></div>}
-{tailwind && <div class="transition ease-linear hover:scale-110 duration-75"><TailwindIcon /></div>}
-{react && <div class="transition ease-linear hover:scale-110 duration-75"><ReactIcon /></div>}
-{mongo && <div class="transition ease-linear hover:scale-110 duration-75"><MongoIcon /></div>}
-{prisma && <div class="transition ease-linear hover:scale-110 duration-75"><PrismaIcon /></div>}
+{
+  next && (
+    <div class="transition ease-linear hover:scale-110 duration-75">
+      <Badge name="Next" next={true} />
+    </div>
+  )
+}
+{
+  astro && (
+    <div class="transition ease-linear hover:scale-110 duration-75">
+      <AstroIcon />
+    </div>
+  )
+}
+{
+  ts && (
+    <div class="transition ease-linear hover:scale-110 duration-75">
+      <Badge name="TypeScript" ts={true} />
+    </div>
+  )
+}
+{
+  node && (
+    <div class="transition ease-linear hover:scale-110 duration-75">
+      <Badge name="Node" node={true} />
+    </div>
+  )
+}
+{
+  tailwind && (
+    <div class="transition ease-linear hover:scale-110 duration-75">
+      <Badge name="Tailwind" tailwind={true} />
+    </div>
+  )
+}
+{
+  react && (
+    <div class="transition ease-linear hover:scale-110 duration-75">
+      {" "}
+      <Badge name="React" react={true} />
+    </div>
+  )
+}
+{
+  mongo && (
+    <div class="transition ease-linear hover:scale-110 duration-75">
+      <Badge name="MongoDB" mongo={true} />{" "}
+    </div>
+  )
+}
+{
+  prisma && (
+    <div class="transition ease-linear hover:scale-110 duration-75">
+      {" "}
+      <Badge name="Prisma" prisma={true} />
+    </div>
+  )
+}
