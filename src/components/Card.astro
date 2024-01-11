@@ -25,6 +25,8 @@ const {
   beta,
   dev,
   front,
+  back,
+  fullstack,
 } = Astro.props;
 ---
 
@@ -51,7 +53,7 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
   </div>
 </div>
   <div  class="flex-grow flex justify-center flex-wrap gap-2 p-1 h-auto w-auto rounded-3xl py-5">
-    <Status beta={beta} dev={dev} front={front}/>
+    <Status beta={beta} dev={dev} front={front} fullstack={fullstack}/>
   </div>
   <Separator/>
 </div>
@@ -72,7 +74,7 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
   </div>
 
   <div class="md:flex md:flex-col items-center gap-5 p-1 md:border-l-2  md:border-border-color">
-    <div class="w-[100%] mx-auto px-auto py-5 text-xl font-normal min-h-[50%] bg-[#111]">
+    <div class="w-[100%] mx-auto px-auto py-5 text-lg font-normal min-h-[50%] bg-[#111]">
       <p class="px-5">
         {description}
       </p>
