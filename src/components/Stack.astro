@@ -11,9 +11,9 @@ import Badge from "./badge.astro";
 const { next, ts, node, tailwind, react, astro, mongo, prisma} = Astro.props;
 ---
 
-{next && <div class="transition ease-linear hover:scale-110 duration-75"><NextIcon /></div>}
+{next && <div class="transition ease-linear hover:scale-110 duration-75"><Badge name="Next" next={true}/></div>}
 {astro && <div class="transition ease-linear hover:scale-110 duration-75"><AstroIcon /></div>}
-{ts && <div class="transition ease-linear hover:scale-110 duration-75"><TsIcon /></div>}
+{ts && <div class="transition ease-linear hover:scale-110 duration-75"><Badge name="TypeScript" ts={true}/></div>}
 {node && <div class="transition ease-linear hover:scale-110 duration-75"><NodeIcon /></div>}
 {tailwind && <div class="transition ease-linear hover:scale-110 duration-75"><TailwindIcon /></div>}
 {react && <div class="transition ease-linear hover:scale-110 duration-75"><ReactIcon /></div>}
