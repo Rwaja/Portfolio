@@ -1,0 +1,16 @@
+---
+import Badge from "./badge.astro";
+const { beta, alpha, dev, front} = Astro.props; 
+---
+{
+    beta && <Badge name="Beta" status={"orange"}/>
+}
+{
+    alpha && <Badge name="Alpha" status={"red"}/>
+}
+{
+    dev && <Badge name="Developing" status={"green"}/>
+}
+{
+    front && <Badge name="FrontEnd" status={"blue"}/>
+}

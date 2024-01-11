@@ -5,6 +5,7 @@ import CodeIcon from "../assets/code-icon.astro";
 import Separator from "./Separator.astro";
 import Stack from "./Stack.astro";
 import Badge from "./badge.astro";
+import Status from "./status.astro";
 const {
   title,
   description,
@@ -48,9 +49,7 @@ const {
       </h1>
     </div>
     <div  class="flex-grow flex justify-center flex-wrap gap-2 p-1 h-auto w-auto rounded-3xl pb-5 ">
-      <Badge name="Beta" status={"orange"}/>
-      <Badge name="Developing" status={"green"}/>
-      <Badge name="FrontEnd" status={"blue"}/>
+      <Status beta={true} dev={true} front={true}/>
     </div>
     <Separator/>
     <div class="w-[80%] mx-auto my-5 text-lg font-normal min-h-[96px]">
