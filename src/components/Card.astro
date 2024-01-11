@@ -32,11 +32,11 @@ const {
 class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:flex-col md:max-w-4xl border-2 border-border-color hover:shadow-blue duration-700 shadow-2xl"
 >
 <div class="pt-5 text-center text-4xl font-bold">
-  <div class="flex w-[100%] justify-between">
-    <h1 class="ml-56">
+  <div class="flex flex-col md:flex-row w-[100%] justify-between">
+    <h1 class="mx-auto md:pl-[136px]">
       {title}
   </h1>
-  <div class="flex gap-4 pr-10">
+  <div class="flex mx-auto md:mx-0 gap-4 md:pr-10">
     <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
     >
       {url && <VisitIcon />}
@@ -57,7 +57,7 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
 </div>
 <div class="flex flex-col md:flex-row">
 
-  <div class="hover:origin-bottom hover:-rotate-3 duration-200 md:flex-shrink-0 md:mx-2 my-2">
+  <div class="hover:origin-bottom hover:-rotate-3 duration-200 md:flex-shrink-0 mx-1 my-1 md:mx-2 md:my-2">
     <img
     alt="AOTM landing page"
       class="h-auto w-auto object-cover md:w-72"
@@ -71,9 +71,8 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
     />
   </div>
 
-  <div class="md:flex md:flex-col items-center gap-5 p-1 md:border-l-2 md:border-border-color">
-    
-    <div class="w-[80%] md:w-[100%] px-auto py-5 text-xl font-semibold min-h-[50%] bg-[#111]">
+  <div class="md:flex md:flex-col items-center gap-5 p-1 md:border-l-2  md:border-border-color">
+    <div class="w-[100%] mx-auto px-auto py-5 text-xl font-semibold min-h-[50%] bg-[#111]">
       <p class="px-5">
         {description}
       </p>
