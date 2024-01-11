@@ -1,0 +1,19 @@
+---
+import NextIcon from "../assets/next-icon.astro";
+import TsIcon from "../assets/ts-icon.astro";
+import NodeIcon from "../assets/node-icon.astro";
+import TailwindIcon from "../assets/tailwind-icon.astro";
+import ReactIcon from "../assets/react-icon.astro";
+import AstroIcon from "../assets/astro-icon.astro";
+import MongoIcon from "../assets/mongo-icon.astro";
+import PrismaIcon from "../assets/prisma-icon.astro";
+const { name, next, ts, node, tailwind, react, astro, mongo, prisma } =
+  Astro.props;
+---
+{ts && <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-blue-600 hover:text-[#e5e7eb]"><TsIcon/> {name} </span>
+}
+{node && <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-green-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color"><NodeIcon/> {name} </span>
+}
+{
+next && <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-black hover:text-[#e5e7eb] px-2.5 py-0.5 rounded-full hover:bg-black"><NextIcon/> {name} </span>
+}

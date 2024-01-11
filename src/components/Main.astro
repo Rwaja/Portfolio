@@ -8,6 +8,7 @@ import Card from "./Card.astro";
 import Separator from "./Separator.astro";
 import Tech from "./Tech.astro";
 import Presentation from "./Presentation.astro";
+import Badge from "./badge.astro";
 ---
 
 <main class="mt-[6vh]">
@@ -74,7 +75,6 @@ import Presentation from "./Presentation.astro";
     </div>
     <div class="flex flex-col justify-center lg:flex-row w-full md:w-[80%] gap-20 md:gap-4">
       <Presentation />
-      <!-- TODO: Create Badge Compnents -->
       <Tech />
     </div>
   </section>
@@ -105,7 +105,7 @@ import Presentation from "./Presentation.astro";
       <Card
         title="THE FRIENDS LANGUAGE CLUB"
         description="The Friends Club is a web application that coordinates classes between teachers and students remotely. It is the first project in which I am involved voluntarily. It is still in development and will soon be implemented in Kyrgyzstan."
-        image="/thefriends.jpg"
+        image="/TheFriends.jpeg"
         url="https://thefriendslanguageclub.vercel.app"
         urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
         repo={false}
@@ -118,7 +118,7 @@ import Presentation from "./Presentation.astro";
         prisma={true}
       />
 
-      <Card
+      <!-- <Card
         title="PORTFOLIO"
         description="Simple responsive portfolio; it's about me with the goal of finding a stable job. You're here!"
         image="/PORFOLIO-LOGO.jpg"
@@ -132,7 +132,7 @@ import Presentation from "./Presentation.astro";
         tailwind={true}
         react={false}
       />
-      <div></div>
+      <div></div> -->
     </div>
   </div>
 </section>
@@ -161,6 +161,9 @@ import Presentation from "./Presentation.astro";
       >
         <EmailIcon />
         <span class="text-2xl font-bold mb-1">rhuajamaita@gmail.com</span>
+        <Badge name="TypeScript" ts={true}/>
+        <Badge name="Node" node={true}/>
+        <Badge name="Next" next={true}/>
       </div>
     </div>
   </div>
