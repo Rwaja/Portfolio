@@ -25,7 +25,7 @@ const {
 ---
 
 <article
-  class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:max-w-4xl border border-border-color hover:shadow-blue duration-700 shadow-2xl"
+  class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:max-w-4xl border-2 border-border-color hover:shadow-blue duration-700 shadow-2xl"
 >
   <div class="hover:origin-bottom hover:-rotate-3 duration-200 md:flex-shrink-0 md:my-auto m-2 border-2 border-background-color">
     <img
@@ -48,8 +48,10 @@ const {
       </h1>
     </div>
     <Separator/>
-    <div  class="flex-grow flex flex-wrap gap-2 p-1 border-2 bg-background-color border-border-color h-auto mx-auto w-auto rounded-3xl justify-center mt-5 ">
+    <div  class="flex-grow flex justify-center flex-wrap gap-2 p-1 h-auto w-auto rounded-3xl mt-5 pb-5 ">
       <Badge name="Beta" status={"orange"}/>
+      <Badge name="Developing" status={"green"}/>
+      <Badge name="FrontEnd" status={"blue"}/>
     </div>
     <div class="mt-5 text-lg font-normal min-h-[96px]">
       {description}
@@ -59,9 +61,9 @@ const {
 
       </div>
       <div>
-        <h3 class="text-center text-3xl font-normal">STACK</h3>
+        <h3 class="text-center text-3xl font-semibold">STACK</h3>
         <div
-        class="flex-grow flex flex-wrap gap-2 p-1 border-2 bg-background-color border-border-color h-auto mx-auto w-auto rounded-3xl justify-center mt-5 "
+        class="flex-grow flex flex-wrap gap-2 p-1 border-2 bg-background-color border-border-color h-auto mx-auto w-auto md:w-[90%] rounded-3xl justify-center mt-5 "
       >
       <Stack
         ts={ts}
