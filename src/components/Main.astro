@@ -7,9 +7,10 @@ import GithubIcon from "../assets/github-icon.astro";
 import LinkedinIcon from "../assets/linkedin-icon.astro";
 import Card from "./Card.astro";
 import Separator from "./Separator.astro";
-import Tech from "./Tech.astro";
+import Work from "./work.astro";
 import Presentation from "./Presentation.astro";
 import Badge from "./badge.astro";
+import Hobbies from "./hobbies.astro";
 ---
 
 <main class="mt-[6vh]">
@@ -25,15 +26,15 @@ import Badge from "./badge.astro";
         <div class="w-auto md:w-[615px] h-auto mt-5">
           <div class="pt-1 text-center">
             <h1>
-              <span class="font-bold text-5xl sm:text-5xl">RODRIGO HUAJAMAITA</span>
+              <span class="text-5xl font-bold sm:text-5xl">RODRIGO HUAJAMAITA</span>
             </h1>
-            <h2 class="font-medium text-4xl">
-              I'm a <span class="text-blue-500 font-semibold"
+            <h2 class="text-4xl font-medium">
+              I'm a <span class="font-semibold text-blue-500"
                 >FREELANCE DEVELOPER</span
               >
             </h2>
-            <span class="font-extralight text-2xl">
-              ON THE PATH OF <span class="text-blue-500 font-semibold"
+            <span class="text-2xl font-extralight">
+              ON THE PATH OF <span class="font-semibold text-blue-500"
                 >WEB DEVELOPMENT</span
               >
             </span>
@@ -68,23 +69,26 @@ import Badge from "./badge.astro";
     class="scroll-mt-[6vh] flex gap-5 flex-col justify-center items-center h-auto text-base font-extralight bg-[#101010] pb-[5rem] pt-[2rem]"
   >
     <!-- TODO: actualizar contenido-->
-    <div class="flex justify-center items-center w-[80%] md:w-[80%] pb-10">
-      <span class="font-bold text-5xl md:text-6xl">ABOUT</span><span
-        class="font-black text-5xl md:text-6xl text-blue-500 pr-5">.</span
+    <div class="flex justify-center items-center w-[80%] md:w-[80%] pb-[2rem]">
+      <span class="text-5xl font-bold md:text-6xl">ABOUT</span><span
+        class="pr-5 text-5xl font-black text-blue-500 md:text-6xl">.</span
       >
       <Separator />
     </div>
     <div class="flex flex-col justify-center items-center lg:flex-row w-full md:w-[80%] gap-20 md:gap-4">
       <Presentation />
-      <Tech />
+      <div class="flex flex-col gap-5 lg:w-[35%] justify-center items-center">
+        <Work />
+        <Hobbies/>
+      </div>
     </div>
   </section>
   <section id="experience" class="scroll-mt-[6vh] flex justify-center h-[94vh]">
     <!-- TODO: mejorar descripcion -->
     <div class="md:justify-center md:items-center w-[80%] h-[100%]">
       <div class="flex justify-center items-center w-[80%] md:w-[100%]">
-        <span class="font-bold text-5xl md:text-6xl my-6">EXPERIENCE</span><span
-          class="font-black text-5xl md:text-6xl text-blue-500 pr-5">.</span
+        <span class="my-6 text-5xl font-bold md:text-6xl">EXPERIENCE</span><span
+          class="pr-5 text-5xl font-black text-blue-500 md:text-6xl">.</span
         >
         <Separator />
       </div>
@@ -99,8 +103,8 @@ import Badge from "./badge.astro";
   <div class="md:w-[80%] h-[100%]">
     <div class="flex justify-end items-center mx-auto mb-5 w-[80%] md:w-[100%] pb-10">
       <Separator />
-      <span class="font-bold text-5xl md:text-6xl ml-5">PROYECTS</span
-      ><span class="font-black text-5xl md:text-6xl text-blue-500">.</span>
+      <span class="ml-5 text-5xl font-bold md:text-6xl">PROYECTS</span
+      ><span class="text-5xl font-black text-blue-500 md:text-6xl">.</span>
     </div>
     <div class="flex flex-col gap-16">
       <Card
@@ -135,6 +139,7 @@ import Badge from "./badge.astro";
         mongo={true}
         prisma={true}
         beta={true}
+        fullstack={true}
       />
 
       <!-- <Card
@@ -159,8 +164,8 @@ import Badge from "./badge.astro";
   <!-- TODO: mejorar descripcion -->
   <div class="md:justify-center md:items-center w-[80%] h-[100%]">
     <div class="flex justify-center items-center w-[80%] md:w-[100%]">
-      <span class="font-bold text-5xl md:text-6xl my-6">CONTACT</span><span
-        class="font-black text-5xl md:text-6xl text-blue-500 pr-5">.</span
+      <span class="my-6 text-5xl font-bold md:text-6xl">CONTACT</span><span
+        class="pr-5 text-5xl font-black text-blue-500 md:text-6xl">.</span
       >
       <Separator />
     </div>
@@ -176,10 +181,10 @@ import Badge from "./badge.astro";
           LinkedIn.</a>
       </p>
       <div
-        class="flex gap-2 items-center hover:text-blue-500 "
+        class="flex items-center gap-2 hover:text-blue-500 "
       >
         <EmailIcon />
-        <span class="text-2xl font-bold mb-1">rhuajamaita@gmail.com</span>
+        <span class="mb-1 text-2xl font-bold">rhuajamaita@gmail.com</span>
       </div>
     </div>
   </div>
