@@ -31,50 +31,49 @@ const {
 ---
 
 <article
-class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:flex-col md:max-w-4xl border-2 border-border-color hover:shadow-blue duration-700 shadow-2xl"
+class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:flex-col md:max-w-lg border-2 border-border-color hover:shadow-blue duration-700 shadow-2xl"
 >
-<div class="pt-5 text-4xl font-bold text-center">
-  <div class="flex flex-col md:flex-row w-[100%] justify-between">
-    <h1 class="mx-auto md:pl-[136px]">
-      {title}
-  </h1>
-  <div class="flex gap-4 pt-5 mx-auto md:pt-0 md:mx-0 md:pr-10">
-    <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
-    >
-      {url && <VisitIcon />}
-    </a>
-    <a
-      class="text-[#ebecf3] hover:text-blue-500"
-      href={urlRepo}
-      target="_blank"
-    >
-      {repo && <CodeIcon />}
-    </a>
-  </div>
+<div class="mx-1 my-1 duration-200 hover:origin-bottom hover:-rotate-3 md:flex-shrink-0 md:mx-2 md:my-2">
+  <img
+  alt="AOTM landing page"
+    class="object-cover w-auto h-auto md:w-72"
+    height="300"
+    src={image}
+    style={{
+      aspectRatio: "300/300",
+      objectFit: "cover",
+    }}
+    width="300"
+  />
 </div>
-  <div  class="flex flex-wrap justify-center flex-grow w-auto h-auto gap-2 p-1 py-5 rounded-3xl">
-    <Status beta={beta} dev={dev} front={front} fullstack={fullstack}/>
+<div class="flex flex-col">
+  <div class="pt-5 text-3xl font-black text-center">
+    <div class="flex flex-col md:flex-row w-[100%] justify-between">
+      <h1 class="mx-auto">
+        {title}
+    </h1>
+    <!-- <div class="flex gap-4 pt-5 mx-auto md:pt-0 md:mx-0 md:pr-10">
+      <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
+      >
+        {url && <VisitIcon />}
+      </a>
+      <a
+        class="text-[#ebecf3] hover:text-blue-500"
+        href={urlRepo}
+        target="_blank"
+      >
+        {repo && <CodeIcon />}
+      </a>
+    </div> -->
   </div>
-  <Separator/>
-</div>
-<div class="flex flex-col md:flex-row">
-
-  <div class="mx-1 my-1 duration-200 hover:origin-bottom hover:-rotate-3 md:flex-shrink-0 md:mx-2 md:my-2">
-    <img
-    alt="AOTM landing page"
-      class="object-cover w-auto h-auto md:w-72"
-      height="300"
-      src={image}
-      style={{
-        aspectRatio: "300/300",
-        objectFit: "cover",
-      }}
-      width="300"
-    />
+    <div  class="flex flex-wrap justify-center max-w-xs mx-auto flex-grow w-auto h-auto gap-2 p-1 py-5 rounded-3xl">
+      <Status beta={beta} dev={dev} front={front} fullstack={fullstack}/>
+    </div>
   </div>
+  
 
-  <div class="items-center gap-5 p-1 md:flex md:flex-col md:border-l-2 md:border-border-color">
-    <div class="w-[100%] mx-auto px-auto py-5 text-lg font-normal min-h-[50%] rounded bg-[#111]">
+  <div class="items-center gap-5 p-1 md:flex md:flex-col">
+    <div class="w-[100%] mx-auto px-auto py-5 text-sm md:text-base font-normal min-h-[50%] rounded-lg bg-[#111]">
       <p class="px-5">
         {description}
       </p>
@@ -84,7 +83,11 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
 
       </div>
       <div>
-        <h3 class="text-xl font-semibold text-center">STACK</h3>
+        <div class="flex gap-2 items-center">
+          <Separator />
+          <h3 class="text-xl font-black text-center">STACK</h3>
+          <Separator />
+        </div>
         <div
         class="flex-grow flex flex-wrap gap-2 p-1 h-auto mx-auto w-auto md:w-[100%] justify-center items-center rounded-lg mt-2 "
         >
