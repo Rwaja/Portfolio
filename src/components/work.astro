@@ -4,29 +4,28 @@ import Separator from "./Separator.astro";
 import Badge from "./badge.astro";
 ---
 
-<div class="w-[90%] lg:w-[100%] h-auto md:h-[75%] py-5 px-2 rounded-xl border border-border-color bg-background-color">
+<div class="w-[80%] h-auto md:h-auto py-5 px-2 rounded-xl border border-blue-950/80 bg-background-color">
   <!-- Tecnologias -->
   <div
     class="flex flex-col items-center justify-center w-full gap-2 lg:flex-row lg:pb-5 md:gap-2"
   >
     <DevIcon />
-    <h3 class="text-3xl font-bold text-center lg:mb-0">
+    <h3 class="text-xl font-bold text-center lg:mb-0">
       Use in Work
     </h3>
   </div>
-  <Separator />
   <div
-    class="flex flex-wrap gap-4 md:gap-4 mx-auto justify-center items-center pt-5 text-center h-auto w-[90%] md:w-full font-bold text-base"
+    class="flex flex-wrap gap-3 mx-auto justify-center items-center text-center h-auto w-[90%] md:w-full font-bold text-base"
   >
-  <Badge name="TypeScript" ts={true}/>
-  <Badge name="Next" next={true}/>
-  <Badge name="JavaScript" js={true}/>
   <Badge name="Git" git={true}/>
-  <Badge name="CCS" css={true}/>
-  <Badge name="HTML" html={true}/>
-  <Badge name="Prisma" prisma={true}/>
-  <Badge name="Tailwind" tailwind={true}/>
+  <Badge name="Next" next={true}/>
   <Badge name="React" react={true}/> 
+  <Badge name="JavaScript" js={true}/>
+  <Badge name="TypeScript" ts={true}/>
+  <Badge name="HTML" html={true}/>
+  <Badge name="CCS" css={true}/>
+  <Badge name="Tailwind" tailwind={true}/>
+  <Badge name="Prisma" prisma={true}/>
   <Badge name="MongoDB" mongo={true}/>   
   <Badge name="Node" node={true}/>
   </div>
