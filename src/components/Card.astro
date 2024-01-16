@@ -31,16 +31,16 @@ const {
 ---
 
 <article
-class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:flex-col md:max-w-lg border-2 border-border-color hover:shadow-blue duration-700 shadow-2xl"
+class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:flex-col md:max-w-md border-2 border-border-color hover:shadow-blue duration-700 shadow-2xl"
 >
 <div class="mx-1 my-1 duration-200 hover:origin-bottom hover:-rotate-3 md:flex-shrink-0 md:mx-2 md:my-2">
   <img
   alt="AOTM landing page"
-    class="object-cover w-auto h-auto md:w-72"
-    height="300"
+    class="object-cover mx-auto w-auto h-auto md:w-72"
+    height="150"
     src={image}
     style={{
-      aspectRatio: "300/300",
+      aspectRatio: "300/150",
       objectFit: "cover",
     }}
     width="300"
@@ -48,25 +48,29 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
 </div>
 <div class="flex flex-col">
   <div class="pt-5 text-2xl font-black text-center">
-    <div class="flex flex-row w-[100%] items-center">
-      <h1 class="w-full">
-        {title}
-    </h1>
-
-    <!-- <div class="flex gap-4 pt-5 mx-auto md:pt-0 md:mx-0 md:pr-10">
-      <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
-      >
-        {url && <VisitIcon />}
-      </a>
-      <a
-        class="text-[#ebecf3] hover:text-blue-500"
-        href={urlRepo}
-        target="_blank"
-      >
-        {repo && <CodeIcon />}
-      </a>
-    </div> -->
-  </div>
+    <div class="flex flex-row md:gap-2 w-[100%] items-center">
+      <Separator/>
+        <h1 class="flex-shrink-0 text-white w-[60%] md:w-auto select-none">
+          {title}
+          <span class="text-blue-500">.</span>
+        </h1>
+        
+        <!-- <div class="flex gap-4 pt-5 mx-auto md:pt-0 md:mx-0 md:pr-10">
+          <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
+          >
+          {url && <VisitIcon />}
+        </a>
+        <a
+          class="text-[#ebecf3] hover:text-blue-500"
+          href={urlRepo}
+          target="_blank"
+        >
+          {repo && <CodeIcon />}
+        </a>
+      </div> -->
+      <Separator/>
+    </div>
+      
     <div  class="flex flex-wrap justify-center flex-grow w-auto h-auto max-w-[75%] gap-2 p-1 py-5 mx-auto select-none rounded-3xl">
       <Status beta={beta} dev={dev} front={front} fullstack={fullstack}/>
     </div>
@@ -74,7 +78,7 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
   
 
   <div class="items-center gap-5 p-1 md:flex md:flex-col">
-    <div class="w-[100%] mx-auto px-auto py-5 text-sm md:text-base font-normal min-h-[50%] rounded-lg bg-[#111]">
+    <div class="w-[100%] mx-auto px-auto py-5 text-sm md:text-base font-normal min-h-[50%] rounded-lg">
       <p class="px-5">
         {description}
       </p>
@@ -86,7 +90,7 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
       <div>
         <div class="flex items-center gap-2">
           <Separator />
-          <h3 class="text-xl font-black text-center select-none">STACK</h3>
+          <span class="flex text-2xl font-black text-blue-500"><h3 class="text-2xl font-black text-center text-white select-none">Stack</h3>.</span>
           <Separator />
         </div>
         <div
