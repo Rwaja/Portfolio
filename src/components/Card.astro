@@ -6,7 +6,9 @@ import Separator from "./Separator.astro";
 import Stack from "./Stack.astro";
 import Badge from "./badge.astro";
 import Status from "./status.astro";
+import Dialog from "./Dialog.astro";
 const {
+  id,
   title,
   description,
   image,
@@ -27,31 +29,34 @@ const {
   front,
   back,
   fullstack,
+  dialog,
 } = Astro.props;
 ---
 
 <article
-class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:flex-col md:max-w-md border-2 border-border-color hover:shadow-blue duration-150 shadow-2xl"
+  class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:flex-col md:max-w-md border-2 border-border-color hover:shadow-blue duration-150 shadow-2xl"
 >
-<div class="mx-1 my-1 duration-150 md:flex-shrink-0 md:mx-2 md:my-2 transition ease-linear hover:scale-105">
-  <img
-  alt="AOTM landing page"
-  class="object-fill w-full"
-  src={image}
-  style={{
-    aspectRatio: "400/300",
-  }}
-/>
-</div>
-<div class="flex flex-col">
-  <div class="pt-5 text-2xl font-black text-center">
-    <div class="flex flex-row md:gap-2 w-[100%] items-center">
-      <Separator/>
+  <div
+    class="mx-1 my-1 duration-150 md:flex-shrink-0 md:mx-2 md:my-2 transition ease-linear hover:scale-105"
+  >
+    <img
+      alt="AOTM landing page"
+      class="object-fill w-full"
+      src={image}
+      style={{
+        aspectRatio: "400/300",
+      }}
+    />
+  </div>
+  <div class="flex flex-col">
+    <div class="pt-5 text-2xl font-black text-center">
+      <div class="flex flex-row md:gap-2 w-[100%] items-center">
+        <Separator />
         <h1 class="flex-shrink-0 text-white w-[60%] md:w-auto select-none">
           {title}
           <span class="text-blue-500">.</span>
         </h1>
-        
+
         <!-- <div class="flex gap-4 pt-5 mx-auto md:pt-0 md:mx-0 md:pr-10">
           <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
           >
@@ -65,47 +70,57 @@ class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:
           {repo && <CodeIcon />}
         </a>
       </div> -->
-      <Separator/>
-    </div>
-      
-    <div  class="flex flex-wrap justify-center flex-grow w-auto h-auto max-w-[75%] gap-2 p-1 py-5 mx-auto select-none rounded-3xl">
-      <Status beta={beta} dev={dev} front={front} fullstack={fullstack}/>
-    </div>
-  </div>
-  
-
-  <div class="items-center gap-5 p-1 md:flex md:flex-col">
-    <div class="w-[100%] mx-auto px-auto text-sm md:text-base font-normal min-h-[50%] rounded-lg">
-      <p class="px-5">
-        {description}
-      </p>
-    </div>
-    <div>
-      <div>
-
+        <Separator />
       </div>
-      <div class="py-5">
-        <div class="flex items-center gap-2">
-          <Separator />
-          <span class="flex text-2xl font-black text-blue-500"><h3 class="text-2xl font-black text-center text-white select-none">STACK</h3>.</span>
-          <Separator />
+
+      <div
+        class="flex flex-wrap justify-center flex-grow w-auto h-auto max-w-[75%] gap-2 p-1 py-5 mx-auto select-none rounded-3xl"
+      >
+        <Status beta={beta} dev={dev} front={front} fullstack={fullstack} />
+      </div>
+    </div>
+
+    <div class="items-center p-1 md:flex md:flex-col">
+      <div
+        class="w-[100%] mx-auto px-auto text-sm md:text-base font-normal min-h-[50%] rounded-lg"
+      >
+        <p class="px-5">
+          {description}
+        </p>
+        <Dialog uniqueId={id}>
+          <p>{dialog}</p>
+        </Dialog>
+        <div>
+          <div></div>
+          <div class="py-5">
+            <div class="flex items-center gap-2">
+              <Separator />
+              <span class="flex text-2xl font-black text-blue-500"
+                ><h3
+                  class="text-2xl font-black text-center text-white select-none"
+                >
+                  STACK
+                </h3>.</span
+              >
+              <Separator />
+            </div>
+            <div
+              class="flex-grow flex flex-wrap gap-2 p-1 h-auto mx-auto w-auto md:w-[100%] justify-center items-center rounded-lg mt-2 select-none"
+            >
+              <Stack
+                ts={ts}
+                next={next}
+                node={node}
+                tailwind={tailwind}
+                react={react}
+                astro={astro}
+                mongo={mongo}
+                prisma={prisma}
+              />
+            </div>
+          </div>
         </div>
-        <div
-        class="flex-grow flex flex-wrap gap-2 p-1 h-auto mx-auto w-auto md:w-[100%] justify-center items-center rounded-lg mt-2 select-none"
-        >
-        <Stack
-        ts={ts}
-        next={next}
-        node={node}
-        tailwind={tailwind}
-        react={react}
-        astro={astro}
-        mongo={mongo}
-        prisma={prisma}
-      />
+      </div>
     </div>
   </div>
-  </div>
-  </div>
-</div>
 </article>

@@ -1,0 +1,52 @@
+---
+const { uniqueId } = Astro.props;
+---
+
+<dialog id={`favDialog-${uniqueId}`}>
+    <section class="h-[80%] w-[80%] bg-white">
+      <p><slot/></p>
+      <button id={`closeDialog-${uniqueId}`}>Close Dialog</button>
+    </section>
+</dialog>
+<button id={`openDialog-${uniqueId}`}>Open Dialog</button>
+<script is:inline>
+(function () {
+    window.addEventListener('load', function () {
+    var uniqueIds = ["1","2"];
+
+    uniqueIds.forEach(function(uniqueId) {
+      var openButton = document.getElementById(`openDialog-${uniqueId}`);
+      var favDialog = document.getElementById(`favDialog-${uniqueId}`);
+      if(openButton !== null){
+        openButton.addEventListener("click", function () {
+          favDialog && favDialog.showModal();
+        });
+      }
+    });
+    });
+    window.addEventListener('load', function () {
+        var uniqueIds = ["1","2"];
+        
+    uniqueIds.forEach(function(uniqueId) {
+      var closeButton = document.getElementById(`closeDialog-${uniqueId}`);
+      var favDialog = document.getElementById(`favDialog-${uniqueId}`);
+      if(closeButton !== null){
+        closeButton.addEventListener("click", function () {
+          favDialog && favDialog.close();
+        });
+      }
+    });
+  });
+})();
+</script>
+<style>
+  dialog {
+    border: 10px solid white;
+    border-radius: 10px;
+    padding: 10px;
+    background: white;
+  }
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.8); /* Un fondo negro con 80% de opacidad */
+  }
+</style>
