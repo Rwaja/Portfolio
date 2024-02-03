@@ -1,54 +1,54 @@
 ---
-import NextIcon from "../assets/next-icon.astro";
-import TsIcon from "../assets/ts-icon.astro";
-import NodeIcon from "../assets/node-icon.astro";
-import TailwindIcon from "../assets/tailwind-icon.astro";
-import ReactIcon from "../assets/react-icon.astro";
-import AstroIcon from "../assets/astro-icon.astro";
-import MongoIcon from "../assets/mongo-icon.astro";
-import PrismaIcon from "../assets/prisma-icon.astro";
+import NextIcon from "../assets/stack-icons/next-icon.astro";
+import TsIcon from "../assets/stack-icons/ts-icon.astro";
+import NodeIcon from "../assets/stack-icons/node-icon.astro";
+import TailwindIcon from "../assets/stack-icons/tailwind-icon.astro";
+import ReactIcon from "../assets/stack-icons/react-icon.astro";
+import AstroIcon from "../assets/stack-icons/astro-icon.astro";
+import MongoIcon from "../assets/stack-icons/mongo-icon.astro";
+import PrismaIcon from "../assets/stack-icons/prisma-icon.astro";
 import Badge from "./badge.astro";
 const { next, ts, node, tailwind, react, astro, mongo, prisma } = Astro.props;
 ---
 
 {
   next && (
-    <div class="transition ease-linear hover:scale-110 duration-75">
+    <div class="transition duration-75 ease-linear hover:scale-110">
       <Badge name="Next" next={true} />
     </div>
   )
 }
 {
   astro && (
-    <div class="transition ease-linear hover:scale-110 duration-75">
+    <div class="transition duration-75 ease-linear hover:scale-110">
       <AstroIcon />
     </div>
   )
 }
 {
   ts && (
-    <div class="transition ease-linear hover:scale-110 duration-75">
+    <div class="transition duration-75 ease-linear hover:scale-110">
       <Badge name="TypeScript" ts={true} />
     </div>
   )
 }
 {
   node && (
-    <div class="transition ease-linear hover:scale-110 duration-75">
+    <div class="transition duration-75 ease-linear hover:scale-110">
       <Badge name="Node" node={true} />
     </div>
   )
 }
 {
   tailwind && (
-    <div class="transition ease-linear hover:scale-110 duration-75">
+    <div class="transition duration-75 ease-linear hover:scale-110">
       <Badge name="Tailwind" tailwind={true} />
     </div>
   )
 }
 {
   react && (
-    <div class="transition ease-linear hover:scale-110 duration-75">
+    <div class="transition duration-75 ease-linear hover:scale-110">
       {" "}
       <Badge name="React" react={true} />
     </div>
@@ -56,14 +56,14 @@ const { next, ts, node, tailwind, react, astro, mongo, prisma } = Astro.props;
 }
 {
   mongo && (
-    <div class="transition ease-linear hover:scale-110 duration-75">
+    <div class="transition duration-75 ease-linear hover:scale-110">
       <Badge name="MongoDB" mongo={true} />{" "}
     </div>
   )
 }
 {
   prisma && (
-    <div class="transition ease-linear hover:scale-110 duration-75">
+    <div class="transition duration-75 ease-linear hover:scale-110">
       {" "}
       <Badge name="Prisma" prisma={true} />
     </div>

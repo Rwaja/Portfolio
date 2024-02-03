@@ -5,6 +5,7 @@ import CodeIcon from "../assets/code-icon.astro";
 import Separator from "./Separator.astro";
 import Stack from "./Stack.astro";
 import Badge from "./badge.astro";
+import Status from "./status.astro";
 const {
   title,
   description,
@@ -21,51 +22,78 @@ const {
   astro,
   mongo,
   prisma,
+  beta,
+  dev,
+  front,
+  back,
+  fullstack,
 } = Astro.props;
 ---
 
 <article
-  class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:max-w-4xl border-2 border-border-color hover:shadow-blue duration-700 shadow-2xl"
+class="max-w-xs mx-auto w-auto bg-background-color text-[#ebecf3] rounded-xl md:flex md:flex-col md:max-w-md border-2 border-border-color hover:shadow-blue duration-150 shadow-2xl"
 >
-  <div class="hover:origin-bottom hover:-rotate-3 duration-200 md:flex-shrink-0 md:my-auto m-2 border-2 border-background-color">
-    <img
-      alt="Man looking at item at a store"
-      class="h-auto w-auto object-cover md:w-72"
-      height="300"
-      src={image}
-      style={{
-        aspectRatio: "300/300",
-        objectFit: "cover",
-      }}
-      width="300"
-    />
+<div class="mx-1 my-1 duration-150 md:flex-shrink-0 md:mx-2 md:my-2 transition ease-linear hover:scale-105">
+  <img
+  alt="AOTM landing page"
+  class="object-fill w-full"
+  src={image}
+  style={{
+    aspectRatio: "400/300",
+  }}
+/>
+</div>
+<div class="flex flex-col">
+  <div class="pt-5 text-2xl font-black text-center">
+    <div class="flex flex-row md:gap-2 w-[100%] items-center">
+      <Separator/>
+        <h1 class="flex-shrink-0 text-white w-[60%] md:w-auto select-none">
+          {title}
+          <span class="text-blue-500">.</span>
+        </h1>
+        
+        <!-- <div class="flex gap-4 pt-5 mx-auto md:pt-0 md:mx-0 md:pr-10">
+          <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
+          >
+          {url && <VisitIcon />}
+        </a>
+        <a
+          class="text-[#ebecf3] hover:text-blue-500"
+          href={urlRepo}
+          target="_blank"
+        >
+          {repo && <CodeIcon />}
+        </a>
+      </div> -->
+      <Separator/>
+    </div>
+      
+    <div  class="flex flex-wrap justify-center flex-grow w-auto h-auto max-w-[75%] gap-2 p-1 py-5 mx-auto select-none rounded-3xl">
+      <Status beta={beta} dev={dev} front={front} fullstack={fullstack}/>
+    </div>
   </div>
+  
 
-  <div class="md:flex md:flex-col p-1 ml-2 rounded-xl">
-    <div class="my-5 text-center text-4xl font-bold">
-      <h1>
-        {title}
-      </h1>
-    </div>
-    <Separator/>
-    <div  class="flex-grow flex justify-center flex-wrap gap-2 p-1 h-auto w-auto rounded-3xl mt-5 pb-5 ">
-      <Badge name="Beta" status={"orange"}/>
-      <Badge name="Developing" status={"green"}/>
-      <Badge name="FrontEnd" status={"blue"}/>
-    </div>
-    <div class="mt-5 text-lg font-normal min-h-[96px]">
-      {description}
+  <div class="items-center gap-5 p-1 md:flex md:flex-col">
+    <div class="w-[100%] mx-auto px-auto text-sm md:text-base font-normal min-h-[50%] rounded-lg">
+      <p class="px-5">
+        {description}
+      </p>
     </div>
     <div>
       <div>
 
       </div>
-      <div>
-        <h3 class="text-center text-3xl font-semibold">STACK</h3>
+      <div class="py-5">
+        <div class="flex items-center gap-2">
+          <Separator />
+          <span class="flex text-2xl font-black text-blue-500"><h3 class="text-2xl font-black text-center text-white select-none">STACK</h3>.</span>
+          <Separator />
+        </div>
         <div
-        class="flex-grow flex flex-wrap gap-2 p-1 border-2 bg-background-color border-border-color h-auto mx-auto w-auto md:w-[90%] rounded-3xl justify-center mt-5 "
-      >
-      <Stack
+        class="flex-grow flex flex-wrap gap-2 p-1 h-auto mx-auto w-auto md:w-[100%] justify-center items-center rounded-lg mt-2 select-none"
+        >
+        <Stack
         ts={ts}
         next={next}
         node={node}
@@ -78,18 +106,6 @@ const {
     </div>
   </div>
   </div>
-    <div class="mt-5 flex justify-center items-center gap-4">
-      <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
-      >
-        {url && <VisitIcon />}
-      </a>
-      <a
-        class="text-[#ebecf3] hover:text-blue-500"
-        href={urlRepo}
-        target="_blank"
-      >
-        {repo && <CodeIcon />}
-      </a>
-    </div>
   </div>
+</div>
 </article>

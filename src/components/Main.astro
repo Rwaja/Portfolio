@@ -2,14 +2,15 @@
 import { Image, Picture } from "astro:assets";
 import ProfileImg from "../assets/pngegg.png";
 import TestImg from "../assets/testimg.jpg";
-import EmailIcon from "../assets/email-icon.astro";
+import EmailIcon from "../assets/stack-icons/email-icon.astro";
 import GithubIcon from "../assets/github-icon.astro";
 import LinkedinIcon from "../assets/linkedin-icon.astro";
 import Card from "./Card.astro";
 import Separator from "./Separator.astro";
-import Tech from "./Tech.astro";
+import Work from "./work.astro";
 import Presentation from "./Presentation.astro";
 import Badge from "./badge.astro";
+import Hobbies from "./hobbies.astro";
 ---
 
 <main class="mt-[6vh]">
@@ -23,23 +24,23 @@ import Badge from "./badge.astro";
         class="flex flex-col md:pt-[0] md:flex-row md:justify-center md:items-center w-[90%] md:w-[80%] h-auto md:h-[100%] gap-16"
       >
         <div class="w-auto md:w-[615px] h-auto mt-5">
-          <div class="pt-1 text-center">
+          <div class="pt-1 text-center md:text-left">
             <h1>
-              <span class="font-bold text-5xl sm:text-5xl">RODRIGO HUAJAMAITA</span>
+              <span class="text-5xl font-bold sm:text-5xl">RODRIGO HUAJAMAITA</span>
             </h1>
-            <h2 class="font-medium text-4xl">
-              I'm a <span class="text-blue-500 font-semibold"
-                >FREELANCE DEVELOPER</span
+            <h2 class="text-4xl font-medium">
+              I'm a <span class="font-semibold text-blue-500"
+                >FULLSTACK DEVELOPER</span
               >
             </h2>
-            <span class="font-extralight text-2xl">
-              ON THE PATH OF <span class="text-blue-500 font-semibold"
+            <span class="text-2xl font-extralight">
+              ON THE PATH OF <span class="font-semibold text-blue-500"
                 >WEB DEVELOPMENT</span
               >
             </span>
           </div>
           <div
-            class="flex pt-3 md:pt-5 gap-6 w-[100%] h-[20%] items-center justify-center text-white"
+            class="flex pt-3 md:pt-5 gap-6 w-[100%] h-[20%] items-center justify-center md:justify-normal text-white"
           >
             <a href="#contact">
               <EmailIcon />
@@ -68,31 +69,48 @@ import Badge from "./badge.astro";
     class="scroll-mt-[6vh] flex gap-5 flex-col justify-center items-center h-auto text-base font-extralight bg-[#101010] pb-[5rem] pt-[2rem]"
   >
     <!-- TODO: actualizar contenido-->
-    <div class="flex justify-center items-center w-[80%] md:w-[80%] pb-10">
-      <span class="font-bold text-5xl md:text-6xl">ABOUT</span><span
-        class="font-black text-5xl md:text-6xl text-blue-500 pr-5">.</span
+    <div class="flex justify-center items-center w-[80%] md:w-[80%] pb-[2rem]">
+      <span class="text-5xl font-bold select-none md:text-5xl">ABOUT</span><span
+        class="pr-5 text-5xl font-black text-blue-500 md:text-5xl">.</span
       >
       <Separator />
     </div>
-    <div class="flex flex-col justify-center lg:flex-row w-full md:w-[80%] gap-20 md:gap-4">
+    <div class="flex flex-col justify-center lg:flex-row w-full md:w-[80%] gap-5 md:gap-4">
       <Presentation />
-      <Tech />
+      <div class="flex flex-col gap-5 lg:w-[35%] items-center select-none">
+        <Work />
+        <Hobbies/>
+      </div>
     </div>
   </section>
-
+  <section id="experience" class="scroll-mt-[6vh] flex justify-center h-[94vh]">
+    <!-- TODO: mejorar descripcion -->
+    <div class="md:justify-center md:items-center w-[80%] h-[100%]">
+      <div class="flex justify-center items-center w-[80%] md:w-[100%]">
+        <span class="my-6 text-5xl font-bold select-none md:text-6xl">EXPERIENCE</span><span
+          class="pr-5 text-5xl font-black text-blue-500 md:text-6xl">.</span
+        >
+        <Separator />
+      </div>
+      <div
+        class="flex flex-col justify-center items-center h-[80%] gap-5 text-center"
+      >
+      </div>
+    </div>
+  </section>
 <section id="proyects" class="scroll-mt-[6vh] flex pb-[5rem] pt-[2rem] justify-center bg-[#101010] h-auto">
   <!-- TODO: arreglar card portfolio-->
   <div class="md:w-[80%] h-[100%]">
-    <div class="flex justify-end items-center mx-auto mb-5 w-[80%] md:w-[100%] pb-10">
-      <Separator />
-      <span class="font-bold text-5xl md:text-6xl ml-5">PROYECTS</span
-      ><span class="font-black text-5xl md:text-6xl text-blue-500">.</span>
+    <div class="flex justify-end items-center mx-auto mb-5 w-[100%] md:w-[100%] pb-10">
+      <Separator/>
+      <span class="ml-5 text-5xl font-bold select-none md:text-6xl">PROJECTS</span
+      ><span class="text-5xl font-black text-blue-500 md:text-6xl">.</span>
     </div>
-    <div class="flex flex-col gap-16">
+    <div class="flex flex-col gap-16 md:flex-row">
       <Card
         title="ADVENTIST ON THE MAP"
         description="Adventists on the Map is a web application that allows you to connect Adventist people and their services with people from all over the world. This was the first project with a real client. The application is still in development!"
-        image="/AOTM.png"
+        image="/AOTM.webp"
         url="http://adventistonthemap.com"
         urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
         repo={true}
@@ -101,12 +119,15 @@ import Badge from "./badge.astro";
         node={true}
         tailwind={true}
         react={true}
+        beta={true}
+        dev={true}
+        front={true}
       />
 
       <Card
-        title="THE FRIENDS LANGUAGE CLUB"
+        title="THE FRIENDS CLUB"
         description="The Friends Club is a web application that coordinates classes between teachers and students remotely. It is the first project in which I am involved voluntarily. It is still in development and will soon be implemented in Kyrgyzstan."
-        image="/thefriends.jpg"
+        image="/thefriends.webp"
         url="https://thefriendslanguageclub.vercel.app"
         urlGithub="https://github.com/vicenzogiordana/advOnTheMap"
         repo={false}
@@ -117,6 +138,9 @@ import Badge from "./badge.astro";
         react={true}
         mongo={true}
         prisma={true}
+        beta={true}
+        dev={true}
+        fullstack={true}
       />
 
       <!-- <Card
@@ -140,9 +164,9 @@ import Badge from "./badge.astro";
 <section id="contact" class="scroll-mt-[6vh] flex justify-center h-[94vh]">
   <!-- TODO: mejorar descripcion -->
   <div class="md:justify-center md:items-center w-[80%] h-[100%]">
-    <div class="flex justify-center items-center w-[80%] md:w-[100%]">
-      <span class="font-bold text-5xl md:text-6xl my-6">CONTACT</span><span
-        class="font-black text-5xl md:text-6xl text-blue-500 pr-5">.</span
+    <div class=" flex items-center w-[100%]">
+      <span class="my-6 text-5xl font-bold select-none md:text-6xl">CONTACT</span><span
+        class="pr-5 text-5xl font-black text-blue-500 md:text-6xl">.</span
       >
       <Separator />
     </div>
@@ -158,10 +182,10 @@ import Badge from "./badge.astro";
           LinkedIn.</a>
       </p>
       <div
-        class="flex gap-2 items-center hover:text-blue-500 "
+        class="flex items-center gap-2 hover:text-blue-500 "
       >
         <EmailIcon />
-        <span class="text-2xl font-bold mb-1">rhuajamaita@gmail.com</span>
+        <span class="mb-1 text-2xl font-bold">rhuajamaita@gmail.com</span>
       </div>
     </div>
   </div>

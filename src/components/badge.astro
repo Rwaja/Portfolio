@@ -1,23 +1,24 @@
 ---
-import NextIcon from "../assets/next-icon.astro";
-import TsIcon from "../assets/ts-icon.astro";
-import NodeIcon from "../assets/node-icon.astro";
-import TailwindIcon from "../assets/tailwind-icon.astro";
-import ReactIcon from "../assets/react-icon.astro";
-import AstroIcon from "../assets/astro-icon.astro";
-import MongoIcon from "../assets/mongo-icon.astro";
-import PrismaIcon from "../assets/prisma-icon.astro";
-import JsIcon from "../assets/js-icon.astro";
-import ExpressIcon from "../assets/express-icon.astro";
-import GitIcon from "../assets/git-icon.astro";
-import CssIcon from "../assets/css-icon.astro";
-import HtmlIcon from "../assets/html-icon.astro";
-import MongooseIcon from "../assets/mongoose-icon.astro";
+import NextIcon from "../assets/stack-icons/next-icon.astro";
+import TsIcon from "../assets/stack-icons/ts-icon.astro";
+import NodeIcon from "../assets/stack-icons/node-icon.astro";
+import TailwindIcon from "../assets/stack-icons/tailwind-icon.astro";
+import ReactIcon from "../assets/stack-icons/react-icon.astro";
+import AstroIcon from "../assets/stack-icons/astro-icon.astro";
+import MongoIcon from "../assets/stack-icons/mongo-icon.astro";
+import PrismaIcon from "../assets/stack-icons/prisma-icon.astro";
+import JsIcon from "../assets/stack-icons/js-icon.astro";
+import ExpressIcon from "../assets/stack-icons/express-icon.astro";
+import GitIcon from "../assets/stack-icons/git-icon.astro";
+import CssIcon from "../assets/stack-icons/css-icon.astro";
+import HtmlIcon from "../assets/stack-icons/html-icon.astro";
+import MongooseIcon from "../assets/stack-icons/mongoose-icon.astro";
 import RedDotIcon from "../assets/status/red-dot-icon.astro";
 import GreenDotIcon from "../assets/status/green-dot-icon.astro";
 import YellowDotIcon from "../assets/status/yellow-dot-icon.astro";
 import BlueDotIcon from "../assets/status/blue-dot-icon.astro";
 import OrangeDotIcon from "../assets/status/orange-dot-icon.astro";
+import PurpleDotIcon from "../assets/status/purple-dot-icon.astro";
 const {
   name,
   next,
@@ -40,134 +41,141 @@ const {
 
 {
   ts && (
-    <span class="flex gap-2 justify-center items-center border border-border-color font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-blue-600 hover:text-[#e5e7eb]">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-background-color hover:bg-blue-600 hover:text-[#e5e7eb]">
       <TsIcon /> {name}{" "}
     </span>
   )
 }
 {
   next && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-black hover:text-[#e5e7eb] px-2.5 py-0.5 rounded-full hover:bg-black">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-black hover:text-[#e5e7eb] hover:bg-black">
       <NextIcon /> {name}{" "}
     </span>
   )
 }
 {
   astro && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-orange-500 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-background-color hover:bg-orange-500 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color">
       <AstroIcon /> {name}{" "}
     </span>
   )
 }
 {
   js && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-blue-600 hover:text-[#e5e7eb]">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-background-color hover:bg-blue-600 hover:text-[#e5e7eb]">
       <JsIcon /> {name}{" "}
     </span>
   )
 }
 {
   express && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-black dark:text-background-color px-2.5 py-0.5 rounded-full hover:bg-gray-800 hover:text-[#e5e7eb] dark:hover:bg-gray-800 dark:hover:text-[#e5e7eb]">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-black dark:text-background-color hover:bg-gray-800 hover:text-[#e5e7eb] dark:hover:bg-gray-800 dark:hover:text-[#e5e7eb]">
       <ExpressIcon /> {name}{" "}
     </span>
   )
 }
 {
   git && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-black dark:text-black px-2.5 py-0.5 rounded-full hover:bg-black hover:text-[#e5e7eb] dark:hover:bg-black dark:hover:text-[#e5e7eb]">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-black dark:text-black hover:bg-black hover:text-[#e5e7eb] dark:hover:bg-black dark:hover:text-[#e5e7eb]">
       <GitIcon /> {name}{" "}
     </span>
   )
 }
 {
-  css && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-[#3b82f6] hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color">
-      <CssIcon /> {name}{" "}
+  prisma && (
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-background-color col-start-3 hover:bg-blue-900 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-blue-900 dark:hover:text-[#e5e7eb]">
+      <PrismaIcon /> {name}{" "}
     </span>
   )
 }
 {
   html && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color col-start-3 px-2.5 py-0.5 hover:bg-red-600 hover:text-[#e5e7eb] rounded-full dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-red-600 dark:hover:text-[#e5e7eb]">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-background-color col-start-3 hover:bg-red-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-red-600 dark:hover:text-[#e5e7eb]">
       <HtmlIcon /> {name}{" "}
     </span>
   )
 }
 {
   mongoose && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color col-start-3 px-2.5 py-0.5 hover:bg-red-900 hover:text-[#e5e7eb] rounded-full dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-red-900 dark:hover:text-[#e5e7eb]">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-background-color col-start-3 hover:bg-red-900 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-red-900 dark:hover:text-[#e5e7eb]">
       <MongooseIcon /> {name}{" "}
     </span>
   )
 }
 {
-  prisma && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color col-start-3 px-2.5 py-0.5 hover:bg-blue-900 hover:text-[#e5e7eb] rounded-full dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-blue-900 dark:hover:text-[#e5e7eb]">
-      <PrismaIcon /> {name}{" "}
+  css && (
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-background-color hover:bg-[#3b82f6] hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color">
+      <CssIcon /> {name}{" "}
     </span>
   )
 }
 {
   tailwind && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-teal-500  dark:bg-[#e5e7eb] dark:text-background-color">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 rounded-full h-5 bg-[#e5e7eb] text-background-color hover:bg-teal-500  dark:bg-[#e5e7eb] dark:text-background-color">
       <TailwindIcon /> {name}{" "}
     </span>
   )
 }
 {
   react && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-blue-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 h-5 bg-[#e5e7eb] text-background-color rounded-full hover:bg-blue-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color">
       <ReactIcon /> {name}{" "}
     </span>
   )
 }
 {
   mongo && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-green-500 hover:text-[#654321] dark:bg-[#e5e7eb] dark:text-background-color">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 h-5 bg-[#e5e7eb] text-background-color rounded-full hover:bg-green-500 hover:text-[#654321] dark:bg-[#e5e7eb] dark:text-background-color">
       <MongoIcon /> {name}{" "}
     </span>
   )
 }
 {
   node && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color px-2.5 py-0.5 rounded-full hover:bg-green-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs px-2 h-5 bg-[#e5e7eb] text-background-color rounded-full hover:bg-green-600 hover:text-[#e5e7eb] dark:bg-[#e5e7eb] dark:text-background-color">
       <NodeIcon /> {name}{" "}
     </span>
   )
 }
 {
   status === "red" && (
-    <span class="flex gap-2 justify-center items-center font-bold text-base bg-[#e5e7eb] text-background-color col-start-3 px-2.5 py-0.5 hover:bg-red-600 hover:text-[#e5e7eb] rounded-full dark:bg-[#e5e7eb] dark:text-background-color dark:hover:bg-red-600 dark:hover:text-[#e5e7eb]">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs bg-[#e5e7eb] text-background-color px-2 rounded-full h-5 dark:bg-[#ebecf3] dark:text-background-color">
       <RedDotIcon /> {name}
     </span>
   )
 }
 {
   status === "green" && (
-    <span class="flex gap-2 justify-center items-center font-bold text-sm bg-[#e5e7eb] text-background-color px-2.5 rounded-full h-5 dark:bg-[#e5e7eb] dark:text-background-color">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs bg-[#e5e7eb] text-background-color px-2 rounded-full h-5 dark:bg-[#ebecf3] dark:text-background-color">
       <GreenDotIcon /> {name}{" "}
     </span>
   )
 }
 {
   status === "yellow" && (
-    <span class="flex gap-2 justify-center items-center font-bold text-sm bg-[#e5e7eb] text-background-color px-2.5 rounded-full h-5 dark:bg-[#e5e7eb] dark:text-background-color">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs bg-[#e5e7eb] text-background-color px-2 rounded-full h-5 dark:bg-[#ebecf3] dark:text-background-color">
       <YellowDotIcon /> {name}{" "}
     </span>
   )
 }
 {
   status === "orange" && (
-    <span class="flex gap-2 justify-center items-center font-bold text-sm bg-[#e5e7eb] text-background-color px-2.5 rounded-full h-5 dark:bg-[#e5e7eb] dark:text-background-color">
+    <span class="flex gap-2 justify-center items-center font-bold text-xs bg-[#e5e7eb] text-background-color px-2 rounded-full h-5 dark:bg-[#ebecf3] dark:text-background-color">
       <OrangeDotIcon /> {name}{" "}
     </span>
   )
 }
 {
     status === "blue" && (
-      <span class="flex gap-2 justify-center items-center font-bold text-sm bg-[#e5e7eb] text-background-color px-2.5 rounded-full h-5 dark:bg-[#e5e7eb] dark:text-background-color">
+      <span class="flex gap-2 justify-center items-center font-bold text-xs bg-[#e5e7eb] text-background-color px-2 rounded-full h-5 dark:bg-[#ebecf3] dark:text-background-color">
         <BlueDotIcon /> {name}{" "}
       </span>
     )
+}
+{
+  status === "purple" && (
+    <span class="flex gap-2 justify-center items-center font-bold text-xs bg-[#e5e7eb] text-background-color px-2 rounded-full h-5 dark:bg-[#ebecf3] dark:text-background-color">
+      <PurpleDotIcon /> {name}{" "}
+    </span>
+  )
 }
