@@ -1,0 +1,27 @@
+---
+import CloseDialog from "../../assets/close-dialog.astro";
+import Layout from "../../layouts/Layout.astro";
+import { ViewTransitions } from "astro:transitions";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <ViewTransitions />
+  </head>
+  <body>
+    <main>
+      <section transition:animate="slide">
+        <div class="flex flex-col justify-center w-full bg-white">
+          <div class="w-full flex justify-end">
+            <button><CloseDialog /></button>
+          </div>
+
+          <div class="m-5">anflaaaaaaaaasfa</div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

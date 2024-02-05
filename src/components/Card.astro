@@ -4,8 +4,8 @@ import VisitIcon from "../assets/visit-icon.astro";
 import CodeIcon from "../assets/code-icon.astro";
 import Separator from "./Separator.astro";
 import Stack from "./Stack.astro";
-import Badge from "./badge.astro";
-import Status from "./status.astro";
+import Badge from "./Badge.astro";
+import Status from "./Status.astro";
 import Dialog from "./Dialog.astro";
 const {
   id,
@@ -87,9 +87,10 @@ const {
         <p class="px-5">
           {description}
         </p>
-        <Dialog uniqueId={id}>
+        <!-- <Dialog uniqueId={id} imgurl={image}>
           <p>{dialog}</p>
-        </Dialog>
+        </Dialog> -->
+        <a href={`projects/${id}`} data-astro-reload>VER Detalles</a>
         <div>
           <div></div>
           <div class="py-5">
