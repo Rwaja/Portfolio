@@ -1,100 +1,104 @@
 ---
 import CloseDialog from "../assets/close-dialog.astro";
-const { uniqueId, imgurl } = Astro.props;
+import Separator from "./Separator.astro";
+interface Props {
+  title: string;
+  imgurl: string;
+  uniqueId: string;
+}
+const { uniqueId, imgurl, title } = Astro.props;
 ---
 
-<dialog id={`favDialog-${uniqueId}`} class="md:w-[60%] rounded-xl border-2 border-border-color">
+<dialog id={`favDialog-${uniqueId}`} class="md:w-[60%] rounded-xl border-2 border-border-color bg-[#111111] overflow-hidden">
   <section id={`dialogContent-${uniqueId}`}>
-    <div class="flex flex-col justify-center w-full bg-white">
-      <div class="w-full flex justify-end">
-        <button id={`closeDialog-${uniqueId}`}><CloseDialog/></button>
-      </div>
-    <img
-      alt="AOTM landing page"
-      class="object-fill w-full"
-      src={imgurl}
-      style={{
-        aspectRatio: "400/300",
-      }}
-    />
-      <div class="m-5">
-        <p><slot/></p>
-      </div>
-    </div>
-    </section>
+    <div class="flex flex-col justify-center w-full px-5">
+          <div class="flex md:gap-2 items-center w-full pt-5 text-4xl font-black text-center">
+            <h1
+              class="flex-shrink-0 text-white w-[60%] md:w-auto select-none"
+            >
+              {title}
+              <span class="text-blue-500">.</span>
+            </h1>
+            <Separator />
+            <button id={`closeDialog-${uniqueId}`}><CloseDialog /></button>
+        </div>
+        <slot />
+    </div> 
+  </section>
 </dialog>
 <button id={`openDialog-${uniqueId}`}>Ver Detalles</button>
 <script is:inline>
-(function () {
-    window.addEventListener('load', function () {
-    var uniqueIds = ["1","2"];
+  (function () {
+    window.addEventListener("load", function () {
+      var uniqueIds = ["1", "2"];
 
-    uniqueIds.forEach(function(uniqueId) {
-      var openButton = document.getElementById(`openDialog-${uniqueId}`);
-      var favDialog = document.getElementById(`favDialog-${uniqueId}`);
-      if(openButton !== null){
-        openButton.addEventListener("click", function () {
-          favDialog && favDialog.showModal();
-        });
-      }
-    });
-    });
-    window.addEventListener('load', function () {
-        var uniqueIds = ["1","2"];
-
-    uniqueIds.forEach(function(uniqueId) {
-      var closeButton = document.getElementById(`closeDialog-${uniqueId}`);
-      var favDialog = document.getElementById(`favDialog-${uniqueId}`);
-      if(closeButton !== null){
-        closeButton.addEventListener("click", function () {
-          favDialog && favDialog.close();
-        });
-      }
-    });
-  });
-  window.addEventListener('load', function () {
-    var uniqueIds = ["1","2"];
-
-    uniqueIds.forEach(function(uniqueId) {
-      var favDialog = document.getElementById(`favDialog-${uniqueId}`);
-      var dialogContent = document.getElementById(`dialogContent-${uniqueId}`);
-
-      // Close the dialog when the backdrop is clicked
-      favDialog.addEventListener("click", function (event) {
-        // Only close the dialog if the backdrop itself was clicked
-        // and not something on top of it
-        if (!dialogContent.contains(event.target)) {
-          favDialog && favDialog.close();
+      uniqueIds.forEach(function (uniqueId) {
+        var openButton = document.getElementById(`openDialog-${uniqueId}`);
+        var favDialog = document.getElementById(`favDialog-${uniqueId}`);
+        if (openButton !== null) {
+          openButton.addEventListener("click", function () {
+            favDialog && favDialog.showModal();
+            document.documentElement.style.overflow = "hidden";
+          });
         }
       });
     });
-  });
-  window.addEventListener('load', function () {
-  var uniqueIds = ["1","2"]
+    window.addEventListener("load", function () {
+      var uniqueIds = ["1", "2"];
 
-  uniqueIds.forEach(function(uniqueId) {
-    var favDialog = document.getElementById(`favDialog-${uniqueId}`);
-    var dialogContent = document.getElementById(`dialogContent-${uniqueId}`);
-
-    // Close the dialog when the backdrop is clicked
-    favDialog.addEventListener("click", function (event) {
-      // Only close the dialog if the backdrop itself was clicked
-      // and not something on top of it
-      if (!dialogContent.contains(event.target)) {
-        favDialog && favDialog.close();
-        // Enable scrolling on the body when the dialog is closed
-        document.body.style.overflow = 'auto';
-      }
+      uniqueIds.forEach(function (uniqueId) {
+        var closeButton = document.getElementById(`closeDialog-${uniqueId}`);
+        var favDialog = document.getElementById(`favDialog-${uniqueId}`);
+        if (closeButton !== null) {
+          closeButton.addEventListener("click", function () {
+            favDialog && favDialog.close();
+            document.documentElement.style.overflow = "auto";
+          });
+        }
+      });
     });
+    window.addEventListener("load", function () {
+      var uniqueIds = ["1", "2"];
 
-    // Disable scrolling on the body when the dialog is open
-    favDialog.addEventListener("open", function () {
-      document.body.style.overflow = 'hidden';
+      uniqueIds.forEach(function (uniqueId) {
+        var favDialog = document.getElementById(`favDialog-${uniqueId}`);
+        var dialogContent = document.getElementById(
+          `dialogContent-${uniqueId}`
+        );
+
+        // Close the dialog when the backdrop is clicked
+        favDialog.addEventListener("click", function (event) {
+          // Only close the dialog if the backdrop itself was clicked
+          // and not something on top of it
+          if (!dialogContent.contains(event.target)) {
+            favDialog && favDialog.close();
+            document.documentElement.style.overflow = "auto";
+          }
+        });
+      });
     });
-  });
-});
-})();
+    window.addEventListener("load", function () {
+      var uniqueIds = ["1", "2"];
 
+      uniqueIds.forEach(function (uniqueId) {
+        var favDialog = document.getElementById(`favDialog-${uniqueId}`);
+        var dialogContent = document.getElementById(
+          `dialogContent-${uniqueId}`
+        );
+
+        // Close the dialog when the backdrop is clicked
+        favDialog.addEventListener("click", function (event) {
+          // Only close the dialog if the backdrop itself was clicked
+          // and not something on top of it
+          if (!dialogContent.contains(event.target)) {
+            favDialog && favDialog.close();
+            // Enable scrolling on the body when the dialog is closed
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
+    });
+  })();
 </script>
 <style>
   dialog::backdrop {
