@@ -5,12 +5,39 @@ import Separator from "./Separator.astro";
 import Stack from "./Stack.astro";
 import Badge from "./badge.astro";
 import Status from "./status.astro";
+import Dialog from "./Dialog.astro";
+interface Props {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+  dialog: string;
+  demo: string;
+  urlRepo: string;
+  repo: boolean;
+  next: boolean;
+  ts: boolean;
+  node: boolean;
+  tailwind: boolean;
+  react: boolean;
+  astro: boolean;
+  mongo: boolean;
+  prisma: boolean;
+  beta: boolean;
+  dev: boolean;
+  front: boolean;
+  back: boolean;
+  fullstack: boolean;
+
+}
 const {
   id,
   title,
   description,
   image,
   url,
+  dialog,
   demo,
   urlRepo,
   repo,
@@ -54,7 +81,7 @@ const {
           <span class="text-blue-500">.</span>
         </h1>
 
-        <!-- <div class="flex gap-4 pt-5 mx-auto md:pt-0 md:mx-0 md:pr-10">
+        <div class="flex gap-4 pt-5 mx-auto md:pt-0 md:mx-0 md:pr-10">
           <a class="text-[#ebecf3] hover:text-blue-500" href={url} target="_blank"
           >
           {url && <VisitIcon />}
@@ -66,7 +93,7 @@ const {
         >
           {repo && <CodeIcon />}
         </a>
-      </div> -->
+      </div>
         <Separator />
       </div>
 
@@ -84,9 +111,9 @@ const {
         <p class="px-5">
           {description}
         </p>
-        <!-- <Dialog uniqueId={id} imgurl={image}>
+        <Dialog uniqueId={id} imgurl={image}>
           <p>{dialog}</p>
-        </Dialog> -->
+        </Dialog>
         <a href={`projects/${id}`} data-astro-reload>VER Detalles</a>
         <div>
           <div></div>
