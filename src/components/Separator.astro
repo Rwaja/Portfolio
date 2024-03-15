@@ -1,2 +1,10 @@
-  <div class="bg-blue-950/80 h-[2px] w-full">
+---
+interface Props{
+  className?: string;
+}
+const {
+  className
+} = Astro.props;
+---
+ <div class=`bg-blue-950/80 h-[2px] w-full ${className}`>
   </div>
