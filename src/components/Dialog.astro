@@ -9,16 +9,10 @@ interface Props {
 const { uniqueId, imgurl, title } = Astro.props;
 ---
 
-<dialog id={`favDialog-${uniqueId}`} class="md:w-[60%] rounded-xl border-2 border-border-color bg-[#111111] overflow-hidden">
+<dialog id={`favDialog-${uniqueId}`} class="md:w-[60%] rounded-xl border-2 border-border-color bg-[#111111] overflow-auto">
   <section id={`dialogContent-${uniqueId}`}>
     <div class="flex flex-col justify-center w-full px-5">
           <div class="flex md:gap-2 items-center w-full pt-5 text-4xl font-black text-center">
-            <h1
-              class="flex-shrink-0 text-white w-[60%] md:w-auto select-none"
-            >
-              {title}
-              <span class="text-blue-500">.</span>
-            </h1>
             <Separator />
             <button id={`closeDialog-${uniqueId}`}><CloseDialog /></button>
         </div>
